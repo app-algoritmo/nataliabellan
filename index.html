@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Natália Bellan - Global Authority in Regulatory Science</title>
+    <meta name="description" content="Pioneer in Regulatory Science and Regulatory Intelligence. Strategic consulting for pharma, medtech, and global innovation.">
+    <style>
+        :root {
+            --primary-blue: #001F3F;
+            --accent-green: #00897B;
+            --text-dark: #2F3640;
+            --text-light: #5A5A5A;
+            --bg-light: #F8F9FA;
+            --white: #FFFFFF;
+            --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 8px 30px rgba(0, 31, 63, 0.15);
+            --transition: all 0.3s ease;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--white);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+        }
+        .nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        .nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        .nav a:hover {
+            color: var(--primary-blue);
+        }
+        .btn {
+            padding: 0.75rem 1.75rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-primary {
+            background: var(--primary-blue);
+            color: var(--white);
+            border: none;
+        }
+        .btn-primary:hover {
+            background: #003366;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent-green);
+            border: 2px solid var(--accent-green);
+        }
+        .btn-secondary:hover {
+            background: var(--accent-green);
+            color: var(--white);
+        }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(135deg, var(--bg-light) 0%, var(--white) 100%);
+        }
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+            text-align: center;
+        }
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+        .hero-content .highlight {
+            color: var(--primary-blue);
+        }
+        .hero-content .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+        .hero-content p {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            max-width: 800px;
+        }
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-alt { background: var(--bg-light); }
+        .section h2 {
+            font-size: 2.75rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-weight: 800;
+            text-align: center;
+        }
+        .section h2 .highlight { color: var(--primary-blue); }
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--primary-blue);
+            margin-bottom: 2rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        .intro-text {
+            font-size: 1.125rem;
+            line-height: 1.9;
+            color: var(--text-dark);
+            margin-bottom: 3rem;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .grid {
+            display: grid;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            text-align: center;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        .card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        .card p { color: var(--text-light); line-height: 1.8; }
+        .stats-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 3rem;
+            color: var(--primary-blue);
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        .service-number {
+            background: var(--primary-blue);
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+        }
+        .cta-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-green) 100%);
+            text-align: center;
+            color: var(--white);
+        }
+        .cta-section h2 {
+            font-size: 2.75rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        .cta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        .cta-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .cta-box h3 { font-size: 1.75rem; margin-bottom: 1rem; font-weight: 700; }
+        .cta-box p { font-size: 1.125rem; margin-bottom: 1.5rem; }
+        .cta-section .btn-primary {
+            background: var(--white);
+            color: var(--primary-blue);
+            font-size: 1.125rem;
+            padding: 1rem 2rem;
+        }
+        .cta-section .btn-primary:hover { background: var(--bg-light); }
+        footer {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-section h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+            font-weight: 700;
+        }
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-weight: 400;
+        }
+        .footer-links a:hover { color: var(--white); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 300;
+        }
+        @media (max-width: 768px) {
+            .hero-container { text-align: center; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .nav { display: none; }
+            .grid { grid-template-columns: 1fr; }
+            .cta-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Dr. Natália Bellan</div>
+        <nav class="nav">
+            <a href="#credentials">Credentials</a>
+            <a href="#expertise">Expertise</a>
+            <a href="#services">Services</a>
+            <a href="#global">Global</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Professor <span class="highlight">Dr. Natália Bellan</span></h1>
+                <p class="subtitle">Global Authority in Regulatory Science & Intelligence</p>
+                <p>Transform regulatory challenges into global opportunities with pioneering expertise in pharma, medtech, and innovation.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    <a href="https://sites.google.com/view/nataliabellanfoundation/home-english/courses" target="_blank" class="btn btn-secondary">Online Courses</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="credentials">
+        <h2>Authority <span class="highlight">Credentials</span></h2>
+        <p class="section-subtitle">Pioneer in Creating a New Science for Global Success</p>
+        <p class="intro-text">The world's first and only PhD in Regulatory Science/Regulatory Intelligence, with research registered in 2011 that revolutionized the pharmaceutical industry.</p>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div class="card">
+                <h3>Excellence in Education</h3>
+                <p>Civil Engineering (CEFET-SP), Pharmacist-Biochemist (UNESP & USC), Master's and Doctorate (USP).</p>
+            </div>
+            <div class="card">
+                <h3>Reference Educator</h3>
+                <p>+20 years training >3,000 professionals in global regulatory postgraduate programs.</p>
+            </div>
+            <div class="card">
+                <h3>Innovation & Recognition</h3>
+                <p>Worked on the regulatory revolution before age 30, balancing projects, teaching, and founding the "New Science."</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="expertise">
+        <h2>Areas of <span class="highlight">Expertise</span></h2>
+        <p class="section-subtitle">Navigating Complex Regulatory Landscapes</p>
+        <p class="intro-text">Specialist in high-complexity and innovation sectors, providing precise guidance in:</p>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div class="card">
+                <h3>Pharmaceuticals</h3>
+                <p>Drugs, Biologics, Vaccines, Oncology, Rare Diseases.</p>
+            </div>
+            <div class="card">
+                <h3>Medical Technologies</h3>
+                <p>Devices, SaMD, IVD, Robotics, Ophthalmology, Neuroscience.</p>
+            </div>
+            <div class="card">
+                <h3>Advanced Technologies</h3>
+                <p>Quantum Products, Cosmetics, Nutraceuticals, Reference Standards.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <h2>Professional Services - <span class="highlight">Your Route to Success</span></h2>
+        <p class="section-subtitle">Complete Solutions for Global Ambitions</p>
+        <div class="grid" style="grid-template-columns: 1fr; gap: 3rem;">
+            <div class="card">
+                <div class="service-number">1</div>
+                <h3>Strategic Consulting & Intelligence</h3>
+                <h4>Regulatory Intelligence & Business Strategy</h4>
+                <p>Actionable insights for CEOs, Boards, and Investors.</p>
+                <h4>Regulatory Affairs Across the Product Lifecycle</h4>
+                <p>Comprehensive support from development to post-commercialization.</p>
+                <h4>Technical & Regulatory Defense</h4>
+                <p>Representation in patent disputes and recalls.</p>
+            </div>
+            <div class="card">
+                <div class="service-number">2</div>
+                <h3>MSL & KOL Management</h3>
+                <h4>MSL Strategy & Training</h4>
+                <p>Programs for scientific communication and compliance.</p>
+                <h4>KOL Mapping & Engagement</h4>
+                <p>Analysis and management of global relationships with opinion leaders.</p>
+                <h4>Scientific Exchange</h4>
+                <p>Ethical dialogues between industry and the scientific community.</p>
+            </div>
+            <div class="card">
+                <div class="service-number">3</div>
+                <h3>Science & Education</h3>
+                <h4>Applied Scientific Research</h4>
+                <p>Support for global registrations and Clinical Trials.</p>
+                <h4>Educational Program Development</h4>
+                <p>Creation and accreditation of programs from undergraduate to doctorate.</p>
+                <h4>Online Corporate Training</h4>
+                <p>Customized courses in multiple languages, aligned with FDA/EMA/ANVISA.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="global">
+        <h2>Global Experience & <span class="highlight">Partnerships</span></h2>
+        <p class="section-subtitle">Trusted Partner for Global Leaders</p>
+        <div class="grid stats-grid">
+            <div class="card">
+                <div class="stat-number">30+</div>
+                <div class="stat-label">Countries</div>
+            </div>
+            <div class="card">
+                <div class="stat-number">3,000+</div>
+                <div class="stat-label">Professionals Trained</div>
+            </div>
+            <div class="card">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Years of Experience</div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem; color: var(--text-light);">
+            <p><strong>Industrial Projects:</strong> Merck, AstraZeneca, USP, BMS, Novartis, Pfizer, Samsung Health, Sanofi.</p>
+            <p><strong>Educational Institutions:</strong> UNESP, USP, University of Bordeaux, TOPRA.</p>
+            <p><strong>Global Operations:</strong> Active in +30 countries across the Americas and Europe.</p>
+        </div>
+    </section>
+
+    <section class="cta-section" id="contact">
+        <h2>Ready to Expand Your Business Globally with Confidence?</h2>
+        <p>Leverage the world's leading expert in Regulatory Science to reduce risks and accelerate growth.</p>
+        <div class="cta-grid">
+            <div class="cta-box">
+                <h3>Expert Consultation</h3>
+                <p>Connect for consulting, speaking engagements, training, and strategic partnerships.</p>
+                <a href="mailto:nb@nataliabellan.org" class="btn btn-primary">nb@nataliabellan.org</a>
+            </div>
+            <div class="cta-box">
+                <h3>Elevate Your Team's Skills</h3>
+                <p>Enroll in internationally certified online courses, multilingual, for all levels.</p>
+                <a href="https://sites.google.com/view/nataliabellanfoundation/home-english/courses" target="_blank" class="btn btn-primary">Explore Catalog</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Foundational Publications</h3>
+                <div class="footer-links">
+                    <a href="https://www.amazon.com/stores/author/B0DQHCD34L/allbooks" target="_blank">📚 Books on Amazon</a>
+                    <a href="mailto:nb@nataliabellan.org">✉️ Email: nb@nataliabellan.org</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/nat%C3%A1lia-bellan-engtech-pharmd-mres-ph-d-15845823/" target="_blank">LinkedIn</a>
+                    <a href="https://www.researchgate.net/profile/Natalia-Bellan" target="_blank">ResearchGate</a>
+                    <a href="http://lattes.cnpq.br/0732463146415084" target="_blank">CNPq</a>
+                    <a href="https://www.youtube.com/@drnataliabellanfoundation" target="_blank">YouTube</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dr. Natália Bellan Foundation. All rights reserved.</p>
+          <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Natália Bellan - Global Authority in Regulatory Science</title>
+    <meta name="description" content="Pioneer in Regulatory Science and Regulatory Intelligence. Strategic consulting for pharma, medtech, and global innovation.">
+    <style>
+        :root {
+            --primary-blue: #001F3F;
+            --accent-green: #00897B;
+            --text-dark: #2F3640;
+            --text-light: #5A5A5A;
+            --bg-light: #F8F9FA;
+            --white: #FFFFFF;
+            --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 8px 30px rgba(0, 31, 63, 0.15);
+            --transition: all 0.3s ease;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--white);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+        }
+        .nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        .nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        .nav a:hover {
+            color: var(--primary-blue);
+        }
+        .btn {
+            padding: 0.75rem 1.75rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-primary {
+            background: var(--primary-blue);
+            color: var(--white);
+            border: none;
+        }
+        .btn-primary:hover {
+            background: #003366;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent-green);
+            border: 2px solid var(--accent-green);
+        }
+        .btn-secondary:hover {
+            background: var(--accent-green);
+            color: var(--white);
+        }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(135deg, var(--bg-light) 0%, var(--white) 100%);
+        }
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+            text-align: center;
+        }
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+        .hero-content .highlight {
+            color: var(--primary-blue);
+        }
+        .hero-content .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+        .hero-content p {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            max-width: 800px;
+        }
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-alt { background: var(--bg-light); }
+        .section h2 {
+            font-size: 2.75rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-weight: 800;
+            text-align: center;
+        }
+        .section h2 .highlight { color: var(--primary-blue); }
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--primary-blue);
+            margin-bottom: 2rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        .intro-text {
+            font-size: 1.125rem;
+            line-height: 1.9;
+            color: var(--text-dark);
+            margin-bottom: 3rem;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .grid {
+            display: grid;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            text-align: center;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        .card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        .card p { color: var(--text-light); line-height: 1.8; }
+        .stats-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 3rem;
+            color: var(--primary-blue);
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        .service-number {
+            background: var(--primary-blue);
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+        }
+        .cta-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-green) 100%);
+            text-align: center;
+            color: var(--white);
+        }
+        .cta-section h2 {
+            font-size: 2.75rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        .cta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        .cta-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .cta-box h3 { font-size: 1.75rem; margin-bottom: 1rem; font-weight: 700; }
+        .cta-box p { font-size: 1.125rem; margin-bottom: 1.5rem; }
+        .cta-section .btn-primary {
+            background: var(--white);
+            color: var(--primary-blue);
+            font-size: 1.125rem;
+            padding: 1rem 2rem;
+        }
+        .cta-section .btn-primary:hover { background: var(--bg-light); }
+        footer {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-section h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+            font-weight: 700;
+        }
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-weight: 400;
+        }
+        .footer-links a:hover { color: var(--white); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 300;
+        }
+        @media (max-width: 768px) {
+            .hero-container { text-align: center; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .nav { display: none; }
+            .grid { grid-template-columns: 1fr; }
+            .cta-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Dr. Natália Bellan</div>
+        <nav class="nav">
+            <a href="#credentials">Credentials</a>
+            <a href="#expertise">Expertise</a>
+            <a href="#services">Services</a>
+            <a href="#global">Global</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Professor <span class="highlight">Dr. Natália Bellan</span></h1>
+                <p class="subtitle">Global Authority in Regulatory Science & Intelligence</p>
+                <p>Transform regulatory challenges into global opportunities with pioneering expertise in pharma, medtech, and innovation.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    <a href="https://sites.google.com/view/nataliabellanfoundation/home-english/courses" target="_blank" class="btn btn-secondary">Online Courses</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="credentials">
+        <h2>Authority <span class="highlight">Credentials</span></h2>
+        <p class="section-subtitle">Pioneer in Creating a New Science for Global Success</p>
+        <p class="intro-text">The world's first and only PhD in Regulatory Science/Regulatory Intelligence, with research registered in 2011 that revolutionized the pharmaceutical industry.</p>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div class="card">
+                <h3>Excellence in Education</h3>
+                <p>Civil Engineering (CEFET-SP), Pharmacist-Biochemist (UNESP & USC), Master's and Doctorate (USP).</p>
+            </div>
+            <div class="card">
+                <h3>Reference Educator</h3>
+                <p>+20 years training >3,000 professionals in global regulatory postgraduate programs.</p>
+            </div>
+            <div class="card">
+                <h3>Innovation & Recognition</h3>
+                <p>Worked on the regulatory revolution before age 30, balancing projects, teaching, and founding the "New Science."</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="expertise">
+        <h2>Areas of <span class="highlight">Expertise</span></h2>
+        <p class="section-subtitle">Navigating Complex Regulatory Landscapes</p>
+        <p class="intro-text">Specialist in high-complexity and innovation sectors, providing precise guidance in:</p>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div class="card">
+                <h3>Pharmaceuticals</h3>
+                <p>Drugs, Biologics, Vaccines, Oncology, Rare Diseases.</p>
+            </div>
+            <div class="card">
+                <h3>Medical Technologies</h3>
+                <p>Devices, SaMD, IVD, Robotics, Ophthalmology, Neuroscience.</p>
+            </div>
+            <div class="card">
+                <h3>Advanced Technologies</h3>
+                <p>Quantum Products, Cosmetics, Nutraceuticals, Reference Standards.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <h2>Professional Services - <span class="highlight">Your Route to Success</span></h2>
+        <p class="section-subtitle">Complete Solutions for Global Ambitions</p>
+        <div class="grid" style="grid-template-columns: 1fr; gap: 3rem;">
+            <div class="card">
+                <div class="service-number">1</div>
+                <h3>Strategic Consulting & Intelligence</h3>
+                <h4>Regulatory Intelligence & Business Strategy</h4>
+                <p>Actionable insights for CEOs, Boards, and Investors.</p>
+                <h4>Regulatory Affairs Across the Product Lifecycle</h4>
+                <p>Comprehensive support from development to post-commercialization.</p>
+                <h4>Technical & Regulatory Defense</h4>
+                <p>Representation in patent disputes and recalls.</p>
+            </div>
+            <div class="card">
+                <div class="service-number">2</div>
+                <h3>MSL & KOL Management</h3>
+                <h4>MSL Strategy & Training</h4>
+                <p>Programs for scientific communication and compliance.</p>
+                <h4>KOL Mapping & Engagement</h4>
+                <p>Analysis and management of global relationships with opinion leaders.</p>
+                <h4>Scientific Exchange</h4>
+                <p>Ethical dialogues between industry and the scientific community.</p>
+            </div>
+            <div class="card">
+                <div class="service-number">3</div>
+                <h3>Science & Education</h3>
+                <h4>Applied Scientific Research</h4>
+                <p>Support for global registrations and Clinical Trials.</p>
+                <h4>Educational Program Development</h4>
+                <p>Creation and accreditation of programs from undergraduate to doctorate.</p>
+                <h4>Online Corporate Training</h4>
+                <p>Customized courses in multiple languages, aligned with FDA/EMA/ANVISA.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="global">
+        <h2>Global Experience & <span class="highlight">Partnerships</span></h2>
+        <p class="section-subtitle">Trusted Partner for Global Leaders</p>
+        <div class="grid stats-grid">
+            <div class="card">
+                <div class="stat-number">30+</div>
+                <div class="stat-label">Countries</div>
+            </div>
+            <div class="card">
+                <div class="stat-number">3,000+</div>
+                <div class="stat-label">Professionals Trained</div>
+            </div>
+            <div class="card">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Years of Experience</div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem; color: var(--text-light);">
+            <p><strong>Industrial Projects:</strong> Merck, AstraZeneca, USP, BMS, Novartis, Pfizer, Samsung Health, Sanofi.</p>
+            <p><strong>Educational Institutions:</strong> UNESP, USP, University of Bordeaux, TOPRA.</p>
+            <p><strong>Global Operations:</strong> Active in +30 countries across the Americas and Europe.</p>
+        </div>
+    </section>
+
+    <section class="cta-section" id="contact">
+        <h2>Ready to Expand Your Business Globally with Confidence?</h2>
+        <p>Leverage the world's leading expert in Regulatory Science to reduce risks and accelerate growth.</p>
+        <div class="cta-grid">
+            <div class="cta-box">
+                <h3>Expert Consultation</h3>
+                <p>Connect for consulting, speaking engagements, training, and strategic partnerships.</p>
+                <a href="mailto:nb@nataliabellan.org" class="btn btn-primary">nb@nataliabellan.org</a>
+            </div>
+            <div class="cta-box">
+                <h3>Elevate Your Team's Skills</h3>
+                <p>Enroll in internationally certified online courses, multilingual, for all levels.</p>
+                <a href="https://sites.google.com/view/nataliabellanfoundation/home-english/courses" target="_blank" class="btn btn-primary">Explore Catalog</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Foundational Publications</h3>
+                <div class="footer-links">
+                    <a href="https://www.amazon.com/stores/author/B0DQHCD34L/allbooks" target="_blank">📚 Books on Amazon</a>
+                    <a href="mailto:nb@nataliabellan.org">✉️ Email: nb@nataliabellan.org</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/nat%C3%A1lia-bellan-engtech-pharmd-mres-ph-d-15845823/" target="_blank">LinkedIn</a>
+                    <a href="https://www.researchgate.net/profile/Natalia-Bellan" target="_blank">ResearchGate</a>
+                    <a href="http://lattes.cnpq.br/0732463146415084" target="_blank">CNPq</a>
+                    <a href="https://www.youtube.com/@drnataliabellanfoundation" target="_blank">YouTube</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dr. Natália Bellan Foundation. All rights reserved.</p>
+          <a href="https://app-algoritmo.github.io/digital-solutions" style="margin: 0 10px; text-decoration: none; color: #555;">Developed by Digital Solutios</a>        </div>
+    </footer>
+
+    <script>
+        // Scroll suave para âncoras
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        // Animação de fade-in ao scroll
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        document.querySelectorAll('.card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll suave para âncoras
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        // Animação de fade-in ao scroll
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        document.querySelectorAll('.card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
