@@ -470,30 +470,7 @@
             <p>&copy; 2026 Dr. Natália Bellan Foundation. All rights reserved.</p>
             <a href="https://app-algoritmo.github.io/digital-solutions" style="margin: 0 10px; text-decoration: none; color: #555;">Developed by Digital Solutions</a
 
-    <script>
-        // Scroll suave para âncoras
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', e => {
-                e.preventDefault();
-                document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-        // Animação de fade-in ao scroll
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        });
-        document.querySelectorAll('.card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'all 0.6s ease';
-            observer.observe(el);
-        });
-    </script>
+   
 </body>
 </html>
         </div>
