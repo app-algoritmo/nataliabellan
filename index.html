@@ -5,72 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Natália Bellan - Global Authority in Regulatory Science</title>
     <meta name="description" content="Pioneer in Regulatory Science and Regulatory Intelligence. Strategic consulting for pharma, medtech, and global innovation.">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZV55ZMGWNB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-ZV55ZMGWNB');
-</script>
+    <!-- Google tag (gtag.js) — with default consent denied until user chooses -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZV55ZMGWNB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      // Default: deny all until user consents
+      gtag('consent', 'default', {
+        analytics_storage:    'denied',
+        functionality_storage:'denied',
+        ad_storage:           'denied',
+        ad_user_data:         'denied',
+        ad_personalization:   'denied',
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-ZV55ZMGWNB');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+
     <style>
+        /* ── CSS variables — single source of truth ── */
         :root {
-            --primary-blue: #001F3F;
-            --accent-green: #00897B;
-            --text-dark: #2F3640;
-            --text-light: #5A5A5A;
-            --bg-light: #F8F9FA;
-            --white: #FFFFFF;
-            --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.08);
-            --shadow-md: 0 8px 30px rgba(0, 31, 63, 0.15);
-            --transition: all 0.3s ease;
+            --primary-blue:  #001F3F;
+            --navy-deep:     #001228;
+            --navy-mid:      #002f5e;
+            --accent-green:  #00897B;
+            --teal-light:    #00a896;
+            --text-dark:     #2F3640;
+            --text-light:    #5A5A5A;
+            --bg-light:      #F8F9FA;
+            --gray-100:      #EEF0F3;
+            --gray-400:      #8C9BAB;
+            --white:         #FFFFFF;
+            --shadow-sm:     0 4px 15px rgba(0,0,0,0.08);
+            --shadow-md:     0 8px 30px rgba(0,31,63,0.15);
+            --transition:    all 0.3s ease;
+            --radius:        12px;
         }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior: smooth; }
+
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--white);
             color: var(--text-dark);
             line-height: 1.7;
             overflow-x: hidden;
         }
+
+        /* ── HEADER ── */
         .header {
             position: fixed;
-            top: 0;
-            width: 100%;
+            top: 0; width: 100%;
             padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255,255,255,0.95);
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             z-index: 1000;
             box-shadow: var(--shadow-sm);
             transition: var(--transition);
         }
+
         .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.4rem;
+            font-weight: 400;
             color: var(--primary-blue);
+            font-style: italic;
         }
-        .nav {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-        .nav a {
-            color: var(--text-dark);
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-        .nav a:hover {
-            color: var(--primary-blue);
-        }
+
+        .nav { display:flex; gap:2rem; align-items:center; }
+        .nav a { color:var(--text-dark); text-decoration:none; font-weight:500; font-size:0.9rem; transition:var(--transition); }
+        .nav a:hover { color:var(--primary-blue); }
+
+        /* ── BUTTONS ── */
         .btn {
             padding: 0.75rem 1.75rem;
             border-radius: 8px;
@@ -79,26 +93,14 @@
             transition: var(--transition);
             text-decoration: none;
             display: inline-block;
+            font-family: 'DM Sans', sans-serif;
         }
-        .btn-primary {
-            background: var(--primary-blue);
-            color: var(--white);
-            border: none;
-        }
-        .btn-primary:hover {
-            background: #003366;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-        .btn-secondary {
-            background: transparent;
-            color: var(--accent-green);
-            border: 2px solid var(--accent-green);
-        }
-        .btn-secondary:hover {
-            background: var(--accent-green);
-            color: var(--white);
-        }
+        .btn-primary { background:var(--primary-blue); color:var(--white); border:none; }
+        .btn-primary:hover { background:#003366; transform:translateY(-2px); box-shadow:var(--shadow-md); }
+        .btn-secondary { background:transparent; color:var(--accent-green); border:2px solid var(--accent-green); }
+        .btn-secondary:hover { background:var(--accent-green); color:var(--white); }
+
+        /* ── HERO ── */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -107,210 +109,393 @@
             background: linear-gradient(135deg, var(--bg-light) 0%, var(--white) 100%);
         }
         .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            align-items: center;
-            text-align: center;
+            max-width: 1200px; margin:0 auto;
+            display:flex; flex-direction:column; gap:2rem;
+            align-items:center; text-align:center;
         }
         .hero-content h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-            line-height: 1.1;
+            font-family: 'DM Serif Display', serif;
+            font-size: 3.5rem; font-weight:400;
+            color: var(--text-dark); margin-bottom:1rem; line-height:1.1;
         }
-        .hero-content .highlight {
-            color: var(--primary-blue);
-        }
-        .hero-content .subtitle {
-            font-size: 1.5rem;
-            color: var(--text-dark);
-            margin-bottom: 1.5rem;
-            font-weight: 500;
-        }
-        .hero-content p {
-            font-size: 1.125rem;
-            color: var(--text-light);
-            margin-bottom: 2rem;
-            line-height: 1.8;
-            max-width: 800px;
-        }
-        .hero-cta {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .section {
-            padding: 6rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .section-alt { background: var(--bg-light); }
-        .section h2 {
-            font-size: 2.75rem;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-            font-weight: 800;
-            text-align: center;
-        }
-        .section h2 .highlight { color: var(--primary-blue); }
-        .section-subtitle {
-            font-size: 1.25rem;
-            color: var(--primary-blue);
-            margin-bottom: 2rem;
-            font-weight: 600;
-            text-align: center;
-        }
-        .intro-text {
-            font-size: 1.125rem;
-            line-height: 1.9;
-            color: var(--text-dark);
-            margin-bottom: 3rem;
-            text-align: center;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .grid {
-            display: grid;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
+        .hero-content .highlight { color:var(--primary-blue); }
+        .hero-content .subtitle { font-size:1.5rem; color:var(--text-dark); margin-bottom:1.5rem; font-weight:500; }
+        .hero-content p { font-size:1.125rem; color:var(--text-light); margin-bottom:2rem; line-height:1.8; max-width:800px; }
+        .hero-cta { display:flex; gap:1rem; flex-wrap:wrap; justify-content:center; }
+
+        /* ── SECTIONS ── */
+        .section { padding:6rem 2rem; max-width:1200px; margin:0 auto; }
+        .section-full { padding:6rem 2rem; }
+        .section-alt { background:var(--bg-light); }
+        .section h2 { font-family:'DM Serif Display',serif; font-size:2.75rem; color:var(--text-dark); margin-bottom:1rem; font-weight:400; text-align:center; }
+        .section h2 .highlight { color:var(--primary-blue); }
+        .section-subtitle { font-size:1.25rem; color:var(--primary-blue); margin-bottom:2rem; font-weight:600; text-align:center; }
+        .intro-text { font-size:1.125rem; line-height:1.9; color:var(--text-dark); margin-bottom:3rem; text-align:center; max-width:800px; margin-left:auto; margin-right:auto; }
+
+        /* ── CARDS ── */
+        .grid { display:grid; gap:2rem; margin-top:3rem; }
         .card {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            text-align: center;
+            background: var(--white); padding:2.5rem; border-radius:var(--radius);
+            box-shadow:var(--shadow-sm); transition:var(--transition); text-align:center;
         }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
-        }
-        .card h3 {
-            font-size: 1.5rem;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-        .card p { color: var(--text-light); line-height: 1.8; }
-        .stats-grid {
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            text-align: center;
-        }
-        .stat-number {
-            font-size: 3rem;
-            color: var(--primary-blue);
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-        }
+        .card:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); }
+        .card h3 { font-family:'DM Serif Display',serif; font-size:1.5rem; color:var(--primary-blue); margin-bottom:1rem; font-weight:400; }
+        .card h4 { font-size:0.95rem; font-weight:700; color:var(--text-dark); margin:1.25rem 0 0.4rem; }
+        .card p { color:var(--text-light); line-height:1.8; font-size:0.95rem; }
+
+        .stats-grid { grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); text-align:center; }
+        .stat-number { font-family:'DM Serif Display',serif; font-size:3rem; color:var(--primary-blue); font-weight:400; margin-bottom:0.5rem; }
+        .stat-label { font-size:0.9rem; color:var(--text-light); font-weight:500; letter-spacing:0.03em; }
+
         .service-number {
-            background: var(--primary-blue);
-            color: var(--white);
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 0 auto 1.5rem;
+            background: var(--primary-blue); color:var(--white);
+            width:56px; height:56px; border-radius:50%;
+            display:flex; align-items:center; justify-content:center;
+            font-family:'DM Serif Display',serif; font-size:1.5rem;
+            margin:0 auto 1.5rem;
         }
+
+        /* ── CTA SECTION ── */
         .cta-section {
             padding: 6rem 2rem;
             background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-green) 100%);
-            text-align: center;
-            color: var(--white);
+            text-align: center; color:var(--white);
         }
-        .cta-section h2 {
-            font-size: 2.75rem;
-            margin-bottom: 1rem;
-            font-weight: 800;
-        }
-        .cta-section p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-        .cta-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
+        .cta-section h2 { font-family:'DM Serif Display',serif; font-size:2.75rem; margin-bottom:1rem; font-weight:400; color:var(--white); }
+        .cta-section p { font-size:1.25rem; margin-bottom:2rem; opacity:0.9; }
+        .cta-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:3rem; margin-top:3rem; max-width:1000px; margin-left:auto; margin-right:auto; }
         .cta-box {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 3rem;
-            border-radius: 16px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255,255,255,0.1); padding:3rem; border-radius:16px;
+            backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.2);
         }
-        .cta-box h3 { font-size: 1.75rem; margin-bottom: 1rem; font-weight: 700; }
-        .cta-box p { font-size: 1.125rem; margin-bottom: 1.5rem; }
-        .cta-section .btn-primary {
-            background: var(--white);
-            color: var(--primary-blue);
-            font-size: 1.125rem;
-            padding: 1rem 2rem;
+        .cta-box h3 { font-family:'DM Serif Display',serif; font-size:1.75rem; margin-bottom:1rem; font-weight:400; }
+        .cta-box p { font-size:1.1rem; margin-bottom:1.5rem; opacity:0.9; }
+        .cta-section .btn-primary { background:var(--white); color:var(--primary-blue); font-size:1rem; padding:0.9rem 2rem; }
+        .cta-section .btn-primary:hover { background:var(--bg-light); }
+
+        /* ── FOOTER ── */
+        .site-footer {
+            background: var(--navy-deep);
+            color: rgba(255,255,255,0.6);
+            padding: 5rem 2rem 2.5rem;
         }
-        .cta-section .btn-primary:hover { background: var(--bg-light); }
-        footer {
-            background: var(--primary-blue);
-            color: var(--white);
-            padding: 4rem 2rem 2rem;
-            text-align: center;
-        }
-        .footer-content {
+
+        .footer-inner { max-width:1200px; margin:0 auto; }
+
+        .footer-top {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+            grid-template-columns: 2.2fr 1fr 1fr 1fr 1fr;
+            gap: 2.5rem;
+            padding-bottom: 3.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
         }
-        .footer-section h3 {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
+
+        .footer-brand {}
+
+        .footer-brand-wordmark {
+            font-family: 'DM Serif Display', serif;
+            font-style: italic;
+            font-size: 1.35rem;
             color: var(--white);
-            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
         }
-        .footer-links {
+
+        .footer-brand-sub {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent-green);
+            margin-bottom: 1.1rem;
+        }
+
+        .footer-brand-tagline {
+            font-size: 0.83rem;
+            line-height: 1.75;
+            color: rgba(255,255,255,0.38);
+            margin-bottom: 1.75rem;
+            max-width: 300px;
+        }
+
+        .footer-divider {
+            width: 32px; height: 2px;
+            background: linear-gradient(90deg, var(--accent-green), transparent);
+            margin-bottom: 1.5rem;
+            border-radius: 2px;
+        }
+
+        .footer-social {
             display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
+            gap: 0.5rem;
+            flex-wrap: wrap;
         }
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.9);
+
+        .footer-social a {
+            width: 34px; height: 34px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.09);
+            display: flex; align-items:center; justify-content:center;
+            color: rgba(255,255,255,0.45);
+            text-decoration: none;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            background: var(--accent-green);
+            border-color: var(--accent-green);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .footer-col h4 {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.28);
+            margin-bottom: 1.1rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer-col ul { list-style: none; }
+
+        .footer-col ul li { margin-bottom: 0.45rem; }
+
+        .footer-col ul li a {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
             text-decoration: none;
             transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+            transform: translateX(3px);
+        }
+
+        .footer-col ul li a.footer-highlight {
+            color: var(--teal-light);
+            font-weight: 600;
+        }
+
+        .footer-col ul li a.footer-highlight:hover {
+            color: var(--white);
+        }
+
+        .footer-email-block {
+            margin-top: 0.75rem;
+            padding: 0.65rem 0.85rem;
+            border: 1px solid rgba(0,168,150,0.2);
+            border-radius: 7px;
+            background: rgba(0,137,123,0.06);
+        }
+
+        .footer-email-block a {
+            font-size: 0.8rem !important;
+            color: var(--teal-light) !important;
+        }
+
+        .footer-bottom {
+            padding-top: 2.25rem;
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            font-weight: 400;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
-        .footer-links a:hover { color: var(--white); }
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 2rem;
-            color: rgba(255, 255, 255, 0.8);
-            font-weight: 300;
+
+        .footer-bottom-left { display:flex; flex-direction:column; gap:0.3rem; }
+        .footer-bottom-left p { font-size:0.76rem; color:rgba(255,255,255,0.25); }
+
+        .footer-legal-links {
+            display: flex;
+            gap: 1.25rem;
+            flex-wrap: wrap;
         }
+
+        .footer-legal-links a {
+            font-size: 0.76rem;
+            color: rgba(255,255,255,0.35);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-legal-links a:hover { color: rgba(255,255,255,0.7); }
+
+        .footer-bottom-right { display:flex; align-items:center; gap:1rem; }
+
+        .footer-devby {
+            font-size: 0.76rem;
+            color: rgba(255,255,255,0.22);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-devby:hover { color: var(--accent-green); }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 1024px) {
+            .footer-top { grid-template-columns: 1fr 1fr 1fr; gap:2rem; }
+            .footer-brand { grid-column: 1 / -1; }
+            .footer-brand-tagline { max-width:100%; }
+        }
+
         @media (max-width: 768px) {
-            .hero-container { text-align: center; }
-            .hero-content h1 { font-size: 2.5rem; }
-            .nav { display: none; }
-            .grid { grid-template-columns: 1fr; }
-            .cta-grid { grid-template-columns: 1fr; }
+            .hero-content h1 { font-size:2.5rem; }
+            .nav { display:none; }
+            .grid { grid-template-columns:1fr; }
+            .cta-grid { grid-template-columns:1fr; }
+            .footer-top { grid-template-columns: 1fr 1fr; }
+            .footer-brand { grid-column: 1 / -1; }
+        }
+
+        @media (max-width: 540px) {
+            .footer-top { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction:column; align-items:flex-start; gap:0.75rem; }
+            .footer-legal-links { gap:0.75rem; }
+        }
+
+        /* ═══════════════════════════════════════
+           COOKIE BANNER
+           ═══════════════════════════════════════ */
+        #nb-cookie-banner *,
+        #nb-cookie-banner *::before,
+        #nb-cookie-banner *::after { box-sizing:border-box; margin:0; padding:0; }
+
+        #nb-cookie-banner {
+            position: fixed;
+            bottom: 0; left:0; right:0;
+            z-index: 99999;
+            font-family: 'DM Sans', sans-serif;
+            transform: translateY(110%);
+            opacity: 0;
+            transition: transform 0.55s cubic-bezier(0.16,1,0.3,1),
+                        opacity   0.55s cubic-bezier(0.16,1,0.3,1);
+        }
+
+        #nb-cookie-banner.nb-visible { transform:translateY(0); opacity:1; }
+
+        .nb-card {
+            background: #001228;
+            border-top: 1px solid rgba(255,255,255,0.07);
+            box-shadow: 0 -12px 48px rgba(0,0,0,0.35),
+                        0 -2px 0 rgba(0,168,150,0.25);
+            padding: 1.5rem 2rem;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 1.5rem 2rem;
+            align-items: center;
+        }
+
+        .nb-logo { display:flex; align-items:center; gap:0.6rem; flex-shrink:0; }
+
+        .nb-logo-mark {
+            width:38px; height:38px; border-radius:8px;
+            background:linear-gradient(135deg,#001F3F,#002f5e);
+            border:1px solid rgba(0,168,150,0.25);
+            display:flex; align-items:center; justify-content:center; flex-shrink:0;
+        }
+
+        .nb-logo-mark span {
+            font-family:'DM Serif Display',Georgia,serif;
+            font-style:italic; color:#00a896; font-size:1rem; line-height:1;
+        }
+
+        .nb-logo-text { display:flex; flex-direction:column; }
+        .nb-logo-name { font-weight:700; font-size:0.85rem; color:#fff; line-height:1.2; white-space:nowrap; }
+        .nb-logo-sub  { font-size:0.65rem; font-weight:500; color:#00897B; letter-spacing:0.1em; text-transform:uppercase; }
+
+        .nb-text-title { font-size:0.8rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#00a896; margin-bottom:0.3rem; }
+
+        .nb-text-body { font-size:0.82rem; color:rgba(255,255,255,0.55); line-height:1.6; max-width:640px; }
+        .nb-text-body a { color:rgba(255,255,255,0.75); text-decoration:underline; text-underline-offset:2px; transition:color 0.2s; }
+        .nb-text-body a:hover { color:#00a896; }
+
+        .nb-toggles { display:flex; gap:1.25rem; margin-top:0.7rem; flex-wrap:wrap; align-items:center; }
+
+        .nb-toggle-item { display:flex; align-items:center; gap:0.45rem; cursor:pointer; user-select:none; }
+
+        .nb-toggle-item input[type="checkbox"] {
+            appearance:none; -webkit-appearance:none;
+            width:34px; height:19px;
+            background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.15);
+            border-radius:20px; position:relative; cursor:pointer;
+            transition:background 0.25s, border-color 0.25s; flex-shrink:0;
+        }
+
+        .nb-toggle-item input[type="checkbox"]::after {
+            content:''; position:absolute; top:2px; left:2px;
+            width:13px; height:13px; background:rgba(255,255,255,0.4);
+            border-radius:50%; transition:left 0.25s, background 0.25s;
+        }
+
+        .nb-toggle-item input[type="checkbox"]:checked { background:#00897B; border-color:#00a896; }
+        .nb-toggle-item input[type="checkbox"]:checked::after { left:17px; background:#fff; }
+        .nb-toggle-item input[type="checkbox"]:disabled { opacity:1; cursor:not-allowed; }
+        .nb-toggle-item input[type="checkbox"]:disabled::after { background:rgba(255,255,255,0.6); }
+
+        .nb-toggle-label { font-size:0.77rem; font-weight:500; color:rgba(255,255,255,0.55); line-height:1; white-space:nowrap; }
+        .nb-toggle-item.nb-required .nb-toggle-label { color:rgba(255,255,255,0.3); }
+
+        .nb-actions { display:flex; flex-direction:column; gap:0.5rem; flex-shrink:0; align-items:stretch; min-width:160px; }
+
+        .nb-btn {
+            display:block; width:100%; padding:0.6rem 1.25rem;
+            border-radius:7px; font-family:'DM Sans',sans-serif;
+            font-size:0.78rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase;
+            cursor:pointer; text-align:center; transition:all 0.2s cubic-bezier(0.4,0,0.2,1);
+            border:none; white-space:nowrap;
+        }
+
+        .nb-btn-accept { background:#00897B; color:#fff; box-shadow:0 4px 16px rgba(0,137,123,0.35); }
+        .nb-btn-accept:hover { background:#00a896; transform:translateY(-1px); box-shadow:0 6px 20px rgba(0,137,123,0.45); }
+
+        .nb-btn-save { background:rgba(255,255,255,0.07); color:rgba(255,255,255,0.75); border:1px solid rgba(255,255,255,0.12); }
+        .nb-btn-save:hover { background:rgba(255,255,255,0.12); border-color:rgba(255,255,255,0.25); color:#fff; }
+
+        .nb-btn-reject { background:transparent; color:rgba(255,255,255,0.3); font-size:0.72rem; letter-spacing:0.04em; padding:0.35rem; font-weight:500; text-transform:none; }
+        .nb-btn-reject:hover { color:rgba(255,255,255,0.55); }
+
+        #nb-cookie-reopen {
+            position:fixed; bottom:1.25rem; left:1.25rem; z-index:99998;
+            background:#001228; border:1px solid rgba(255,255,255,0.1);
+            color:rgba(255,255,255,0.6);
+            font-family:'DM Sans',sans-serif; font-size:0.72rem; font-weight:600;
+            letter-spacing:0.06em; text-transform:uppercase;
+            padding:0.45rem 0.9rem; border-radius:6px; cursor:pointer;
+            display:none; align-items:center; gap:0.4rem;
+            transition:all 0.2s; box-shadow:0 4px 16px rgba(0,0,0,0.3);
+        }
+
+        #nb-cookie-reopen:hover { background:#002f5e; border-color:rgba(0,168,150,0.3); color:#00a896; }
+
+        @media (max-width:900px) {
+            .nb-card { grid-template-columns:1fr; gap:1.25rem; padding:1.25rem; }
+            .nb-logo { display:none; }
+            .nb-actions { flex-direction:row; flex-wrap:wrap; min-width:auto; }
+            .nb-btn-accept { flex:1; }
+            .nb-btn-save   { flex:1; }
+            .nb-btn-reject { width:100%; text-align:center; }
+        }
+
+        @media (max-width:480px) {
+            .nb-card { padding:1rem; }
+            .nb-toggles { gap:0.9rem; }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- ── HEADER ── -->
     <header class="header">
         <div class="logo">Dr. Natália Bellan</div>
         <nav class="nav">
@@ -322,11 +507,12 @@
         </nav>
     </header>
 
+    <!-- ── HERO ── -->
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
                 <h1>Professor <span class="highlight">Dr. Natália Bellan</span></h1>
-                <p class="subtitle">Global Authority in Regulatory Science & Intelligence</p>
+                <p class="subtitle">Global Authority in Regulatory Science &amp; Intelligence</p>
                 <p>Transform regulatory challenges into global opportunities with pioneering expertise in pharma, medtech, and innovation.</p>
                 <div class="hero-cta">
                     <a href="#contact" class="btn btn-primary">Get in Touch</a>
@@ -337,73 +523,78 @@
         </div>
     </section>
 
+    <!-- ── CREDENTIALS ── -->
     <section class="section" id="credentials">
         <h2>Authority <span class="highlight">Credentials</span></h2>
         <p class="section-subtitle">Pioneer in Creating a New Science for Global Success</p>
         <p class="intro-text">The world's first and only PhD in Regulatory Science/Regulatory Intelligence, with research registered in 2011 that revolutionized the pharmaceutical industry.</p>
-        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+        <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));">
             <div class="card">
                 <h3>Excellence in Education</h3>
-                <p>Civil Engineering (CEFET-SP), Pharmacist-Biochemist (UNESP & USC), Master's and Doctorate (USP).</p>
+                <p>Civil Engineering (CEFET-SP), Pharmacist-Biochemist (UNESP &amp; USC), Master's and Doctorate (USP).</p>
             </div>
             <div class="card">
                 <h3>Reference Educator</h3>
-                <p>+20 years training >3,000 professionals in global regulatory postgraduate programs.</p>
+                <p>+20 years training &gt;3,000 professionals in global regulatory postgraduate programs.</p>
             </div>
             <div class="card">
-                <h3>Innovation & Recognition</h3>
+                <h3>Innovation &amp; Recognition</h3>
                 <p>Worked on the regulatory revolution before age 30, balancing projects, teaching, and founding the "New Science."</p>
             </div>
         </div>
     </section>
 
-    <section class="section section-alt" id="expertise">
-        <h2>Areas of <span class="highlight">Expertise</span></h2>
-        <p class="section-subtitle">Navigating Complex Regulatory Landscapes</p>
-        <p class="intro-text">Specialist in high-complexity and innovation sectors, providing precise guidance in:</p>
-        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-            <div class="card">
-                <h3>Pharmaceuticals</h3>
-                <p>Drugs, Biologics, Vaccines, Oncology, Rare Diseases.</p>
+    <!-- ── EXPERTISE ── -->
+    <div class="section-full section-alt">
+        <section class="section" id="expertise" style="padding-top:0;padding-bottom:0;">
+            <h2>Areas of <span class="highlight">Expertise</span></h2>
+            <p class="section-subtitle">Navigating Complex Regulatory Landscapes</p>
+            <p class="intro-text">Specialist in high-complexity and innovation sectors, providing precise guidance in:</p>
+            <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));">
+                <div class="card">
+                    <h3>Pharmaceuticals</h3>
+                    <p>Drugs, Biologics, Vaccines, Oncology, Rare Diseases.</p>
+                </div>
+                <div class="card">
+                    <h3>Medical Technologies</h3>
+                    <p>Devices, SaMD, IVD, Robotics, Ophthalmology, Neuroscience.</p>
+                </div>
+                <div class="card">
+                    <h3>Advanced Technologies</h3>
+                    <p>Quantum Products, Cosmetics, Nutraceuticals, Reference Standards.</p>
+                </div>
             </div>
-            <div class="card">
-                <h3>Medical Technologies</h3>
-                <p>Devices, SaMD, IVD, Robotics, Ophthalmology, Neuroscience.</p>
-            </div>
-            <div class="card">
-                <h3>Advanced Technologies</h3>
-                <p>Quantum Products, Cosmetics, Nutraceuticals, Reference Standards.</p>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
+    <!-- ── SERVICES ── -->
     <section class="section" id="services">
-        <h2>Professional Services - <span class="highlight">Your Route to Success</span></h2>
+        <h2>Professional Services — <span class="highlight">Your Route to Success</span></h2>
         <p class="section-subtitle">Complete Solutions for Global Ambitions</p>
-        <div class="grid" style="grid-template-columns: 1fr; gap: 3rem;">
+        <div class="grid" style="grid-template-columns:1fr; gap:2rem; max-width:800px; margin:3rem auto 0;">
             <div class="card">
                 <div class="service-number">1</div>
-                <h3>Strategic Consulting & Intelligence</h3>
-                <h4>Regulatory Intelligence & Business Strategy</h4>
+                <h3>Strategic Consulting &amp; Intelligence</h3>
+                <h4>Regulatory Intelligence &amp; Business Strategy</h4>
                 <p>Actionable insights for CEOs, Boards, and Investors.</p>
                 <h4>Regulatory Affairs Across the Product Lifecycle</h4>
                 <p>Comprehensive support from development to post-commercialization.</p>
-                <h4>Technical & Regulatory Defense</h4>
+                <h4>Technical &amp; Regulatory Defense</h4>
                 <p>Representation in patent disputes and recalls.</p>
             </div>
             <div class="card">
                 <div class="service-number">2</div>
-                <h3>MSL & KOL Management</h3>
-                <h4>MSL Strategy & Training</h4>
+                <h3>MSL &amp; KOL Management</h3>
+                <h4>MSL Strategy &amp; Training</h4>
                 <p>Programs for scientific communication and compliance.</p>
-                <h4>KOL Mapping & Engagement</h4>
+                <h4>KOL Mapping &amp; Engagement</h4>
                 <p>Analysis and management of global relationships with opinion leaders.</p>
                 <h4>Scientific Exchange</h4>
                 <p>Ethical dialogues between industry and the scientific community.</p>
             </div>
             <div class="card">
                 <div class="service-number">3</div>
-                <h3>Science & Education</h3>
+                <h3>Science &amp; Education</h3>
                 <h4>Applied Scientific Research</h4>
                 <p>Support for global registrations and Clinical Trials.</p>
                 <h4>Educational Program Development</h4>
@@ -414,32 +605,27 @@
         </div>
     </section>
 
-    <section class="section section-alt" id="global">
-        <h2>Global Experience & <span class="highlight">Partnerships</span></h2>
-        <p class="section-subtitle">Trusted Partner for Global Leaders</p>
-        <div class="grid stats-grid">
-            <div class="card">
-                <div class="stat-number">30+</div>
-                <div class="stat-label">Countries</div>
+    <!-- ── GLOBAL ── -->
+    <div class="section-full section-alt">
+        <section class="section" id="global" style="padding-top:0;padding-bottom:0;">
+            <h2>Global Experience &amp; <span class="highlight">Partnerships</span></h2>
+            <p class="section-subtitle">Trusted Partner for Global Leaders</p>
+            <div class="grid stats-grid">
+                <div class="card"><div class="stat-number">30+</div><div class="stat-label">Countries</div></div>
+                <div class="card"><div class="stat-number">3,000+</div><div class="stat-label">Professionals Trained</div></div>
+                <div class="card"><div class="stat-number">20+</div><div class="stat-label">Years of Experience</div></div>
             </div>
-            <div class="card">
-                <div class="stat-number">3,000+</div>
-                <div class="stat-label">Professionals Trained</div>
+            <div style="text-align:center; margin-top:2.5rem; color:var(--text-light); font-size:0.95rem; line-height:2;">
+                <p><strong style="color:var(--text-dark);">Industrial Projects:</strong> Merck, AstraZeneca, USP, BMS, Novartis, Pfizer, Samsung Health, Sanofi.</p>
+                <p><strong style="color:var(--text-dark);">Educational Institutions:</strong> UNESP, USP, University of Bordeaux, TOPRA.</p>
+                <p><strong style="color:var(--text-dark);">Global Operations:</strong> Active in +30 countries across the Americas and Europe.</p>
             </div>
-            <div class="card">
-                <div class="stat-number">20+</div>
-                <div class="stat-label">Years of Experience</div>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 2rem; color: var(--text-light);">
-            <p><strong>Industrial Projects:</strong> Merck, AstraZeneca, USP, BMS, Novartis, Pfizer, Samsung Health, Sanofi.</p>
-            <p><strong>Educational Institutions:</strong> UNESP, USP, University of Bordeaux, TOPRA.</p>
-            <p><strong>Global Operations:</strong> Active in +30 countries across the Americas and Europe.</p>
-        </div>
-    </section>
+        </section>
+    </div>
 
+    <!-- ── CTA / CONTACT ── -->
     <section class="cta-section" id="contact">
-        <h2>Ready to Expand Your Business Globally with Confidence?</h2>
+        <h2>Ready to Expand Your Business Globally?</h2>
         <p>Leverage the world's leading expert in Regulatory Science to reduce risks and accelerate growth.</p>
         <div class="cta-grid">
             <div class="cta-box">
@@ -455,58 +641,270 @@
         </div>
     </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Foundational Publications</h3>
-                <div class="footer-links">
-                    <a href="https://www.amazon.com/stores/author/B0DQHCD34L/allbooks" target="_blank">📚 Books on Amazon</a>
-                    <a href="mailto:nb@nataliabellan.org">✉️ Email: nb@nataliabellan.org</a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3>Connect</h3>
-                <div class="footer-links">
-                    <a href="https://www.linkedin.com/in/nat%C3%A1lia-bellan-engtech-pharmd-mres-ph-d-15845823/" target="_blank">LinkedIn</a>
-                    <a href="https://www.researchgate.net/profile/Natalia-Bellan" target="_blank">ResearchGate</a>
-                    <a href="http://lattes.cnpq.br/0732463146415084" target="_blank">CNPq</a>
-                    <a href="https://www.youtube.com/@drnataliabellanfoundation" target="_blank">YouTube</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Dr. Natália Bellan Foundation. All rights reserved.</p>
-            <a href="https://app-algoritmo.github.io/digital-solutions" style="margin: 0 10px; text-decoration: none; color: #555;">Developed by Digital Solutions</a
+    <!-- ══════════════════════════════════════════════
+         PROFESSIONAL FOOTER
+         ══════════════════════════════════════════════ -->
+    <footer class="site-footer">
+        <div class="footer-inner">
 
-   
-</body>
-</html>
+            <div class="footer-top">
+
+                <!-- Brand column -->
+                <div class="footer-brand">
+                    <div class="footer-brand-wordmark">Dr. Natália Bellan</div>
+                    <div class="footer-brand-sub">Foundation</div>
+                    <div class="footer-divider"></div>
+                    <p class="footer-brand-tagline">The world's first PhD in Regulatory Science/Regulatory Intelligence. Pioneering global expertise in pharma, medtech &amp; innovation since 2011.</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/nat%C3%A1lia-bellan-engtech-pharmd-mres-ph-d-15845823/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+                        <a href="https://www.youtube.com/@drnataliabellanfoundation" target="_blank" rel="noopener" title="YouTube">▶</a>
+                        <a href="https://www.researchgate.net/profile/Natalia-Bellan" target="_blank" rel="noopener" title="ResearchGate">RG</a>
+                        <a href="http://lattes.cnpq.br/0732463146415084" target="_blank" rel="noopener" title="CNPq Lattes">CV</a>
+                        <a href="https://www.amazon.com/stores/author/B0DQHCD34L/allbooks" target="_blank" rel="noopener" title="Books on Amazon">📚</a>
+                    </div>
+                </div>
+
+                <!-- Services column -->
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Strategic Consulting</a></li>
+                        <li><a href="#services">Regulatory Intelligence</a></li>
+                        <li><a href="#services">MSL &amp; KOL Management</a></li>
+                        <li><a href="#services">Clinical Trial Support</a></li>
+                        <li><a href="#services">Technical Defense</a></li>
+                    </ul>
+                </div>
+
+                <!-- Education column -->
+                <div class="footer-col">
+                    <h4>Education</h4>
+                    <ul>
+                        <li><a href="https://sites.google.com/view/nataliabellanfoundation/courses" target="_blank" rel="noopener" class="footer-highlight">Online Courses ↗</a></li>
+                        <li><a href="https://sites.google.com/view/nataliabellanfoundation/courses" target="_blank" rel="noopener">Mentorship</a></li>
+                        <li><a href="https://sites.google.com/view/nataliabellanfoundation/courses" target="_blank" rel="noopener">Corporate Training</a></li>
+                        <li><a href="https://www.amazon.com/stores/author/B0DQHCD34L/allbooks" target="_blank" rel="noopener">Books on Amazon</a></li>
+                        <li><a href="https://www.researchgate.net/profile/Natalia-Bellan" target="_blank" rel="noopener">ResearchGate</a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect column -->
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#credentials">Credentials</a></li>
+                        <li><a href="#expertise">Expertise</a></li>
+                        <li><a href="#global">Global Reach</a></li>
+                        <li><a href="#contact">Get in Touch</a></li>
+                        <li><a href="http://lattes.cnpq.br/0732463146415084" target="_blank" rel="noopener">CNPq Lattes</a></li>
+                    </ul>
+                    <div class="footer-email-block">
+                        <a href="mailto:nb@nataliabellan.org">✉ nb@nataliabellan.org</a>
+                    </div>
+                </div>
+
+                <!-- Legal column -->
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="https://nataliabellan.org/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="https://nataliabellan.org/terms-of-use">Terms of Use</a></li>
+                        <li><a href="https://nataliabellan.org/cookie-notice">Cookie Notice</a></li>
+                    </ul>
+                </div>
+
+            </div><!-- /footer-top -->
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <p>&copy; 2026 Dr. Natália Bellan Foundation. All rights reserved.</p>
+                    <div class="footer-legal-links">
+                        <a href="https://nataliabellan.org/privacy-policy">Privacy Policy</a>
+                        <a href="https://nataliabellan.org/terms-of-use">Terms of Use</a>
+                        <a href="https://nataliabellan.org/cookie-notice">Cookie Notice</a>
+                        <a href="#" onclick="nbReopen();return false;">🍪 Cookie Preferences</a>
+                    </div>
+                </div>
+                <div class="footer-bottom-right">
+                    <a href="https://app-algoritmo.github.io/digital-solutions" target="_blank" rel="noopener" class="footer-devby">Developed by Digital Solutions</a>
+                </div>
+            </div>
+
         </div>
     </footer>
 
+    <!-- ══════════════════════════════════════════════
+         COOKIE BANNER
+         ══════════════════════════════════════════════ -->
+    <div id="nb-cookie-banner" role="dialog" aria-label="Cookie preferences" aria-live="polite">
+        <div class="nb-card">
+
+            <div class="nb-logo">
+                <div class="nb-logo-mark"><span>N</span></div>
+                <div class="nb-logo-text">
+                    <span class="nb-logo-name">Dr. Natália Bellan</span>
+                    <span class="nb-logo-sub">Foundation</span>
+                </div>
+            </div>
+
+            <div class="nb-text">
+                <div class="nb-text-title">🍪 Privacy &amp; Cookies</div>
+                <p class="nb-text-body">
+                    We use cookies to analyze traffic and improve your experience. You can choose which ones to accept.
+                    Read our <a href="https://nataliabellan.org/privacy-policy" target="_blank">Privacy Policy</a>
+                    and <a href="https://nataliabellan.org/cookie-notice" target="_blank">Cookie Notice</a>.
+                </p>
+                <div class="nb-toggles">
+                    <label class="nb-toggle-item nb-required" title="Always active">
+                        <input type="checkbox" id="nb-chk-essential" checked disabled>
+                        <span class="nb-toggle-label">Essential</span>
+                    </label>
+                    <label class="nb-toggle-item">
+                        <input type="checkbox" id="nb-chk-analytics">
+                        <span class="nb-toggle-label">Analytics</span>
+                    </label>
+                    <label class="nb-toggle-item">
+                        <input type="checkbox" id="nb-chk-functional">
+                        <span class="nb-toggle-label">Functional</span>
+                    </label>
+                    <label class="nb-toggle-item">
+                        <input type="checkbox" id="nb-chk-marketing">
+                        <span class="nb-toggle-label">Marketing</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="nb-actions">
+                <button class="nb-btn nb-btn-accept"  onclick="nbAcceptAll()">Accept All</button>
+                <button class="nb-btn nb-btn-save"    onclick="nbSaveChoice()">Save Choice</button>
+                <button class="nb-btn nb-btn-reject"  onclick="nbRejectAll()">Reject optional</button>
+            </div>
+
+        </div>
+    </div>
+
+    <button id="nb-cookie-reopen" onclick="nbReopen()" aria-label="Open cookie preferences">
+        🍪 Cookies
+    </button>
+
+    <!-- ── SCRIPTS ── -->
     <script>
-        // Scroll suave para âncoras
+        /* ── Smooth scroll ── */
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', e => {
-                e.preventDefault();
-                document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                const href = anchor.getAttribute('href');
+                if (href === '#') return;
+                const target = document.querySelector(href);
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior:'smooth' }); }
             });
         });
-        // Animação de fade-in ao scroll
-        const observer = new IntersectionObserver(entries => {
+
+        /* ── Card fade-in on scroll ── */
+        const cardObserver = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
                 }
             });
-        });
+        }, { threshold: 0.1 });
+
         document.querySelectorAll('.card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
-            el.style.transition = 'all 0.6s ease';
-            observer.observe(el);
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            cardObserver.observe(el);
         });
+
+        /* ══════════════════════════════
+           COOKIE BANNER LOGIC
+           ══════════════════════════════ */
+        (function () {
+            var STORE_KEY = 'nb_consent';
+            var banner    = document.getElementById('nb-cookie-banner');
+            var reopen    = document.getElementById('nb-cookie-reopen');
+
+            function pushConsent(analytics, functional, marketing) {
+                if (typeof gtag === 'function') {
+                    gtag('consent', 'update', {
+                        analytics_storage:    analytics  ? 'granted' : 'denied',
+                        functionality_storage:functional ? 'granted' : 'denied',
+                        ad_storage:           marketing  ? 'granted' : 'denied',
+                        ad_user_data:         marketing  ? 'granted' : 'denied',
+                        ad_personalization:   marketing  ? 'granted' : 'denied',
+                    });
+                }
+            }
+
+            function saveConsent(analytics, functional, marketing) {
+                try {
+                    localStorage.setItem(STORE_KEY, JSON.stringify({
+                        analytics, functional, marketing,
+                        timestamp: new Date().toISOString()
+                    }));
+                } catch(e) {}
+                pushConsent(analytics, functional, marketing);
+                hideBanner();
+            }
+
+            function showBanner() {
+                banner.classList.add('nb-visible');
+                reopen.style.display = 'none';
+            }
+
+            function hideBanner() {
+                banner.classList.remove('nb-visible');
+                setTimeout(() => { reopen.style.display = 'flex'; }, 600);
+            }
+
+            window.nbAcceptAll = function () {
+                document.getElementById('nb-chk-analytics').checked  = true;
+                document.getElementById('nb-chk-functional').checked = true;
+                document.getElementById('nb-chk-marketing').checked  = true;
+                saveConsent(true, true, true);
+            };
+
+            window.nbRejectAll = function () {
+                document.getElementById('nb-chk-analytics').checked  = false;
+                document.getElementById('nb-chk-functional').checked = false;
+                document.getElementById('nb-chk-marketing').checked  = false;
+                saveConsent(false, false, false);
+            };
+
+            window.nbSaveChoice = function () {
+                saveConsent(
+                    document.getElementById('nb-chk-analytics').checked,
+                    document.getElementById('nb-chk-functional').checked,
+                    document.getElementById('nb-chk-marketing').checked
+                );
+            };
+
+            window.nbReopen = function () {
+                try {
+                    var saved = JSON.parse(localStorage.getItem(STORE_KEY) || '{}');
+                    document.getElementById('nb-chk-analytics').checked  = !!saved.analytics;
+                    document.getElementById('nb-chk-functional').checked = !!saved.functional;
+                    document.getElementById('nb-chk-marketing').checked  = !!saved.marketing;
+                } catch(e) {}
+                reopen.style.display = 'none';
+                showBanner();
+            };
+
+            /* ── Init ── */
+            var stored = null;
+            try { stored = localStorage.getItem(STORE_KEY); } catch(e) {}
+
+            if (!stored) {
+                setTimeout(showBanner, 900);
+            } else {
+                try {
+                    var c = JSON.parse(stored);
+                    pushConsent(!!c.analytics, !!c.functional, !!c.marketing);
+                } catch(e) {}
+                reopen.style.display = 'flex';
+            }
+        })();
     </script>
+
 </body>
 </html>
