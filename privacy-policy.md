@@ -1,11 +1,11 @@
 # Privacy Policy
 
-**Dr. Natália Bellan Foundation**
+**Dr. Natália Bellan, PhD**
 Last updated: May 2026
 
 ---
 
-This Privacy Policy applies to the website and services of the **Dr. Natália Bellan Foundation** ([nataliabellan.org](https://nataliabellan.org)) and describes how we handle your personal information in compliance with the **LGPD** (Brazilian General Data Protection Law — Law No. 13.709/2018), the **GDPR** (EU General Data Protection Regulation), and other applicable international regulations.
+This Privacy Policy applies to the website and services of **Dr. Natália Bellan, PhD** ([nataliabellan.org](https://nataliabellan.org)) and describes how we handle your personal information in compliance with the **LGPD** (Brazilian General Data Protection Law — Law No. 13.709/2018), the **GDPR** (EU General Data Protection Regulation), and other applicable international regulations.
 
 ---
 
@@ -19,7 +19,7 @@ Our channels may contain links to third-party websites, services, or platforms �
 
 ### 2.1 Information you provide to us
 
-When you interact with the Dr. Natália Bellan Foundation, we may collect:
+When you interact with Dr. Natália Bellan, PhD, we may collect:
 
 - **Personal information** — full name, academic title, job title, organization, country, email address, and phone number
 - **Professional data** — area of expertise (pharmaceutical, medtech, biotechnology, etc.), level of regulatory experience, and training objectives
@@ -49,7 +49,7 @@ We use and share your personal data only for legitimate purposes, including:
 - **Communication** — sending newsletters, regulatory updates, and materials of interest (with consent or where permitted by law)
 - **Academic and corporate partnerships** — sharing necessary information with partner institutions (UNESP, USP, TOPRA, Merck, AstraZeneca, Pfizer, etc.) under strict confidentiality agreements
 - **Publications and research** — anonymized data for scientific research and academic production
-- **Legal obligations** — complying with legal requirements or protecting the rights of the Foundation and its clients
+- **Legal obligations** — complying with legal requirements or protecting the rights of Dr. Natália Bellan, PhD and her clients
 
 We do not sell, rent, or share your personal data with third parties for their own commercial purposes.
 
@@ -113,7 +113,7 @@ No internet transmission system is 100% secure. If you have reason to believe th
 
 ## 9. International Data Transfers
 
-Your data may be processed by tools and platforms whose servers are located outside Brazil — including in the United States and Europe, given the global nature of the Foundation's activities. In such cases, we ensure that appropriate safeguards are in place, in compliance with the LGPD, the GDPR, and other applicable regulations.
+Your data may be processed by tools and platforms whose servers are located outside Brazil — including in the United States and Europe, given the global nature of Dr. Natália Bellan, PhD's activities. In such cases, we ensure that appropriate safeguards are in place, in compliance with the LGPD, the GDPR, and other applicable regulations.
 
 ---
 
@@ -121,7 +121,7 @@ Your data may be processed by tools and platforms whose servers are located outs
 
 For any questions, requests, or concerns related to this Privacy Policy:
 
-**Dr. Natália Bellan Foundation**
+**Dr. Natália Bellan, PhD**
 Email: [nb@nataliabellan.org](mailto:nb@nataliabellan.org)
 Website: [nataliabellan.org](https://nataliabellan.org)
 LinkedIn: [Dr. Natália Bellan](https://www.linkedin.com/in/nat%C3%A1lia-bellan-engtech-pharmd-mres-ph-d-15845823/)
@@ -130,4 +130,4 @@ We respond to all requests within a maximum of 15 business days.
 
 ---
 
-*© 2026 Dr. Natália Bellan Foundation. All rights reserved.*
+*© 2026 Dr. Natália Bellan, PhD. All rights reserved.*
