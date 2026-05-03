@@ -1,11 +1,11 @@
 # Cookie Notice
 
-**Dr. Natália Bellan Foundation**
+**Dr. Natália Bellan, PhD**
 Last updated: May 2026
 
 ---
 
-This notice explains how the **Dr. Natália Bellan Foundation** ([nataliabellan.org](https://nataliabellan.org)) uses cookies and similar technologies when you visit our website. By continuing to browse, you accept the use of essential cookies. For optional cookies, you can adjust your preferences at any time.
+This notice explains how **Dr. Natália Bellan, PhD** ([nataliabellan.org](https://nataliabellan.org)) uses cookies and similar technologies when you visit our website. By continuing to browse, you accept the use of essential cookies. For optional cookies, you can adjust your preferences at any time.
 
 ---
 
@@ -103,7 +103,7 @@ When you first visit our website, you will see a cookie consent panel. The legal
 - **Functional cookies** — legitimate interest or consent
 - **Marketing cookies** — explicit user consent
 
-You may withdraw your consent at any time without affecting the lawfulness of processing carried out prior to withdrawal. The Dr. Natália Bellan Foundation fully complies with the **LGPD (Law No. 13.709/2018)** and the **GDPR** for European users.
+You may withdraw your consent at any time without affecting the lawfulness of processing carried out prior to withdrawal. Dr. Natália Bellan, PhD fully complies with the **LGPD (Law No. 13.709/2018)** and the **GDPR** for European users.
 
 ---
 
@@ -117,7 +117,7 @@ We may update this Cookie Notice to reflect changes in the cookies we use, updat
 
 For questions about our cookies or the processing of your data:
 
-**Dr. Natália Bellan Foundation**
+**Dr. Natália Bellan, PhD**
 Email: [nb@nataliabellan.org](mailto:nb@nataliabellan.org)
 Website: [nataliabellan.org](https://nataliabellan.org)
 
@@ -125,4 +125,4 @@ We respond to all requests within a maximum of 15 business days.
 
 ---
 
-*© 2026 Dr. Natália Bellan Foundation. All rights reserved.*
+*© 2026 Dr. Natália Bellan, PhD. All rights reserved.*
