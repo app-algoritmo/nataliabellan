@@ -493,31 +493,24 @@
             .nb-btn-save   { flex:1; }
             .nb-btn-reject { width:100%; text-align:center; }
         }
-
-        @media (max-width:480px) {
-            .nb-card { padding:1rem; }
-            .nb-toggles { gap:0.9rem; }
-        }
-    </style>
-</head>
 <body>
 
     <!-- ── HEADER ── -->
     <header class="header">
         <div class="logo">Dr. Natália Bellan, PhD</div>
         <nav class="nav">
-            <a href="#credentials">Credentials</a>
-            <a href="#expertise">Expertise</a>
-            <a href="#services">Services</a>
-            <a href="#global">Global</a>
-            <a href="#contact">Contact</a>
+            <a href="#credentials" data-i18n="nav.credentials">Credentials</a>
+            <a href="#expertise"   data-i18n="nav.expertise">Expertise</a>
+            <a href="#services"    data-i18n="nav.services">Services</a>
+            <a href="#global"      data-i18n="nav.global">Global</a>
+            <a href="#contact"     data-i18n="nav.contact">Contact</a>
         </nav>
         <div class="lang-switcher">
-            <a href="https://nataliabellan.org" class="active">EN</a>
+            <a href="#" onclick="setLang('en');return false;" id="lang-en" class="active">EN</a>
             <span class="lang-sep">|</span>
-            <a href="https://nataliabellan.org/pt">PT</a>
+            <a href="#" onclick="setLang('pt');return false;" id="lang-pt">PT</a>
             <span class="lang-sep">|</span>
-            <a href="https://nataliabellan.org/es">ES</a>
+            <a href="#" onclick="setLang('es');return false;" id="lang-es">ES</a>
         </div>
     </header>
 
@@ -525,13 +518,13 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1>Professor <span class="highlight">Dr. Natália Bellan, PhD</span></h1>
-                <p class="subtitle">Global Authority in Regulatory Science &amp; Intelligence</p>
-                <p>Transform regulatory challenges into global opportunities with pioneering expertise in pharma, medtech, and innovation.</p>
+                <h1><span data-i18n="hero.prefix">Professor</span> <span class="highlight">Dr. Natália Bellan, PhD</span></h1>
+                <p class="subtitle" data-i18n="hero.subtitle">Global Authority in Regulatory Science &amp; Intelligence</p>
+                <p data-i18n="hero.body">Transform regulatory challenges into global opportunities with pioneering expertise in pharma, medtech, and innovation.</p>
                 <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                    <a href="https://sites.google.com/view/nataliabellanfoundation/courses" target="_blank" class="btn btn-secondary">Online Courses</a>
-                    <a href="https://sites.google.com/view/nataliabellanfoundation/courses" target="_blank" class="btn btn-secondary">Mentorship</a>
+                    <a href="#contact" class="btn btn-primary" data-i18n="hero.cta1">Get in Touch</a>
+                    <a href="https://sites.google.com/view/nataliabellanfoundation/courses" target="_blank" class="btn btn-secondary" data-i18n="hero.cta2">Online Courses</a>
+                    <a href="https://sites.google.com/view/nataliabellanfoundation/courses" target="_blank" class="btn btn-secondary" data-i18n="hero.cta3">Mentorship</a>
                 </div>
             </div>
         </div>
@@ -539,21 +532,21 @@
 
     <!-- ── CREDENTIALS ── -->
     <section class="section" id="credentials">
-        <h2>Authority <span class="highlight">Credentials</span></h2>
-        <p class="section-subtitle">Pioneer in Creating a New Science for Global Success</p>
-        <p class="intro-text">The world's first and only PhD in Regulatory Science/Regulatory Intelligence, with research registered in 2011 that revolutionized the pharmaceutical industry.</p>
+        <h2><span data-i18n="cred.title1">Authority</span> <span class="highlight" data-i18n="cred.title2">Credentials</span></h2>
+        <p class="section-subtitle" data-i18n="cred.sub">Pioneer in Creating a New Science for Global Success</p>
+        <p class="intro-text" data-i18n="cred.intro">The world's first and only PhD in Regulatory Science/Regulatory Intelligence, with research registered in 2011 that revolutionized the pharmaceutical industry.</p>
         <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));">
             <div class="card">
-                <h3>Excellence in Education</h3>
-                <p>Civil Engineering (CEFET-SP), Pharmacist-Biochemist (UNESP &amp; USC), Master's and Doctorate (USP).</p>
+                <h3 data-i18n="cred.c1h">Excellence in Education</h3>
+                <p data-i18n="cred.c1p">Civil Engineering (CEFET-SP), Pharmacist-Biochemist (UNESP &amp; USC), Master's and Doctorate (USP).</p>
             </div>
             <div class="card">
-                <h3>Reference Educator</h3>
-                <p>+20 years training &gt;3,000 professionals in global regulatory postgraduate programs.</p>
+                <h3 data-i18n="cred.c2h">Reference Educator</h3>
+                <p data-i18n="cred.c2p">+20 years training &gt;3,000 professionals in global regulatory postgraduate programs.</p>
             </div>
             <div class="card">
-                <h3>Innovation &amp; Recognition</h3>
-                <p>Worked on the regulatory revolution before age 30, balancing projects, teaching, and founding the "New Science."</p>
+                <h3 data-i18n="cred.c3h">Innovation &amp; Recognition</h3>
+                <p data-i18n="cred.c3p">Worked on the regulatory revolution before age 30, balancing projects, teaching, and founding the "New Science."</p>
             </div>
         </div>
     </section>
@@ -561,21 +554,21 @@
     <!-- ── EXPERTISE ── -->
     <div class="section-full section-alt">
         <section class="section" id="expertise" style="padding-top:0;padding-bottom:0;">
-            <h2>Areas of <span class="highlight">Expertise</span></h2>
-            <p class="section-subtitle">Navigating Complex Regulatory Landscapes</p>
-            <p class="intro-text">Specialist in high-complexity and innovation sectors, providing precise guidance in:</p>
+            <h2><span data-i18n="exp.title1">Areas of</span> <span class="highlight" data-i18n="exp.title2">Expertise</span></h2>
+            <p class="section-subtitle" data-i18n="exp.sub">Navigating Complex Regulatory Landscapes</p>
+            <p class="intro-text" data-i18n="exp.intro">Specialist in high-complexity and innovation sectors, providing precise guidance in:</p>
             <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));">
                 <div class="card">
-                    <h3>Pharmaceuticals</h3>
-                    <p>Drugs, Biologics, Vaccines, Oncology, Rare Diseases.</p>
+                    <h3 data-i18n="exp.c1h">Pharmaceuticals</h3>
+                    <p data-i18n="exp.c1p">Drugs, Biologics, Vaccines, Oncology, Rare Diseases.</p>
                 </div>
                 <div class="card">
-                    <h3>Medical Technologies</h3>
-                    <p>Devices, SaMD, IVD, Robotics, Ophthalmology, Neuroscience.</p>
+                    <h3 data-i18n="exp.c2h">Medical Technologies</h3>
+                    <p data-i18n="exp.c2p">Devices, SaMD, IVD, Robotics, Ophthalmology, Neuroscience.</p>
                 </div>
                 <div class="card">
-                    <h3>Advanced Technologies</h3>
-                    <p>Quantum Products, Cosmetics, Nutraceuticals, Reference Standards.</p>
+                    <h3 data-i18n="exp.c3h">Advanced Technologies</h3>
+                    <p data-i18n="exp.c3p">Quantum Products, Cosmetics, Nutraceuticals, Reference Standards.</p>
                 </div>
             </div>
         </section>
@@ -583,38 +576,38 @@
 
     <!-- ── SERVICES ── -->
     <section class="section" id="services">
-        <h2>Professional Services — <span class="highlight">Your Route to Success</span></h2>
-        <p class="section-subtitle">Complete Solutions for Global Ambitions</p>
+        <h2><span data-i18n="svc.title1">Professional Services —</span> <span class="highlight" data-i18n="svc.title2">Your Route to Success</span></h2>
+        <p class="section-subtitle" data-i18n="svc.sub">Complete Solutions for Global Ambitions</p>
         <div class="grid" style="grid-template-columns:1fr; gap:2rem; max-width:800px; margin:3rem auto 0;">
             <div class="card">
                 <div class="service-number">1</div>
-                <h3>Strategic Consulting &amp; Intelligence</h3>
-                <h4>Regulatory Intelligence &amp; Business Strategy</h4>
-                <p>Actionable insights for CEOs, Boards, and Investors.</p>
-                <h4>Regulatory Affairs Across the Product Lifecycle</h4>
-                <p>Comprehensive support from development to post-commercialization.</p>
-                <h4>Technical &amp; Regulatory Defense</h4>
-                <p>Representation in patent disputes and recalls.</p>
+                <h3 data-i18n="svc.s1h">Strategic Consulting &amp; Intelligence</h3>
+                <h4 data-i18n="svc.s1a">Regulatory Intelligence &amp; Business Strategy</h4>
+                <p data-i18n="svc.s1ap">Actionable insights for CEOs, Boards, and Investors.</p>
+                <h4 data-i18n="svc.s1b">Regulatory Affairs Across the Product Lifecycle</h4>
+                <p data-i18n="svc.s1bp">Comprehensive support from development to post-commercialization.</p>
+                <h4 data-i18n="svc.s1c">Technical &amp; Regulatory Defense</h4>
+                <p data-i18n="svc.s1cp">Representation in patent disputes and recalls.</p>
             </div>
             <div class="card">
                 <div class="service-number">2</div>
-                <h3>MSL &amp; KOL Management</h3>
-                <h4>MSL Strategy &amp; Training</h4>
-                <p>Programs for scientific communication and compliance.</p>
-                <h4>KOL Mapping &amp; Engagement</h4>
-                <p>Analysis and management of global relationships with opinion leaders.</p>
-                <h4>Scientific Exchange</h4>
-                <p>Ethical dialogues between industry and the scientific community.</p>
+                <h3 data-i18n="svc.s2h">MSL &amp; KOL Management</h3>
+                <h4 data-i18n="svc.s2a">MSL Strategy &amp; Training</h4>
+                <p data-i18n="svc.s2ap">Programs for scientific communication and compliance.</p>
+                <h4 data-i18n="svc.s2b">KOL Mapping &amp; Engagement</h4>
+                <p data-i18n="svc.s2bp">Analysis and management of global relationships with opinion leaders.</p>
+                <h4 data-i18n="svc.s2c">Scientific Exchange</h4>
+                <p data-i18n="svc.s2cp">Ethical dialogues between industry and the scientific community.</p>
             </div>
             <div class="card">
                 <div class="service-number">3</div>
-                <h3>Science &amp; Education</h3>
-                <h4>Applied Scientific Research</h4>
-                <p>Support for global registrations and Clinical Trials.</p>
-                <h4>Educational Program Development</h4>
-                <p>Creation and accreditation of programs from undergraduate to doctorate.</p>
-                <h4>Online Corporate Training</h4>
-                <p>Customized courses in multiple languages, aligned with FDA/EMA/ANVISA.</p>
+                <h3 data-i18n="svc.s3h">Science &amp; Education</h3>
+                <h4 data-i18n="svc.s3a">Applied Scientific Research</h4>
+                <p data-i18n="svc.s3ap">Support for global registrations and Clinical Trials.</p>
+                <h4 data-i18n="svc.s3b">Educational Program Development</h4>
+                <p data-i18n="svc.s3bp">Creation and accreditation of programs from undergraduate to doctorate.</p>
+                <h4 data-i18n="svc.s3c">Online Corporate Training</h4>
+                <p data-i18n="svc.s3cp">Customized courses in multiple languages, aligned with FDA/EMA/ANVISA.</p>
             </div>
         </div>
     </section>
@@ -622,53 +615,48 @@
     <!-- ── GLOBAL ── -->
     <div class="section-full section-alt">
         <section class="section" id="global" style="padding-top:0;padding-bottom:0;">
-            <h2>Global Experience &amp; <span class="highlight">Partnerships</span></h2>
-            <p class="section-subtitle">Trusted Partner for Global Leaders</p>
+            <h2><span data-i18n="glb.title1">Global Experience &amp;</span> <span class="highlight" data-i18n="glb.title2">Partnerships</span></h2>
+            <p class="section-subtitle" data-i18n="glb.sub">Trusted Partner for Global Leaders</p>
             <div class="grid stats-grid">
-                <div class="card"><div class="stat-number">30+</div><div class="stat-label">Countries</div></div>
-                <div class="card"><div class="stat-number">3,000+</div><div class="stat-label">Professionals Trained</div></div>
-                <div class="card"><div class="stat-number">20+</div><div class="stat-label">Years of Experience</div></div>
+                <div class="card"><div class="stat-number">30+</div><div class="stat-label" data-i18n="glb.stat1">Countries</div></div>
+                <div class="card"><div class="stat-number">3,000+</div><div class="stat-label" data-i18n="glb.stat2">Professionals Trained</div></div>
+                <div class="card"><div class="stat-number">20+</div><div class="stat-label" data-i18n="glb.stat3">Years of Experience</div></div>
             </div>
             <div style="text-align:center; margin-top:2.5rem; color:var(--text-light); font-size:0.95rem; line-height:2;">
-                <p><strong style="color:var(--text-dark);">Industrial Projects:</strong> Merck, AstraZeneca, USP, BMS, Novartis, Pfizer, Samsung Health, Sanofi.</p>
-                <p><strong style="color:var(--text-dark);">Educational Institutions:</strong> UNESP, USP, University of Bordeaux, TOPRA.</p>
-                <p><strong style="color:var(--text-dark);">Global Operations:</strong> Active in +30 countries across the Americas and Europe.</p>
+                <p><strong style="color:var(--text-dark);" data-i18n="glb.ind">Industrial Projects:</strong> Merck, AstraZeneca, USP, BMS, Novartis, Pfizer, Samsung Health, Sanofi.</p>
+                <p><strong style="color:var(--text-dark);" data-i18n="glb.edu">Educational Institutions:</strong> UNESP, USP, University of Bordeaux, TOPRA.</p>
+                <p><strong style="color:var(--text-dark);" data-i18n="glb.ops">Global Operations:</strong> Active in +30 countries across the Americas and Europe.</p>
             </div>
         </section>
     </div>
 
     <!-- ── CTA / CONTACT ── -->
     <section class="cta-section" id="contact">
-        <h2>Ready to Expand Your Business Globally?</h2>
-        <p>Leverage the world's leading expert in Regulatory Science to reduce risks and accelerate growth.</p>
+        <h2 data-i18n="cta.title">Ready to Expand Your Business Globally?</h2>
+        <p data-i18n="cta.body">Leverage the world's leading expert in Regulatory Science to reduce risks and accelerate growth.</p>
         <div class="cta-grid">
             <div class="cta-box">
-                <h3>Expert Consultation</h3>
-                <p>Connect for consulting, speaking engagements, training, and strategic partnerships.</p>
+                <h3 data-i18n="cta.b1h">Expert Consultation</h3>
+                <p data-i18n="cta.b1p">Connect for consulting, speaking engagements, training, and strategic partnerships.</p>
                 <a href="mailto:nb@nataliabellan.org" class="btn btn-primary">nb@nataliabellan.org</a>
             </div>
             <div class="cta-box">
-                <h3>Elevate Your Team's Skills</h3>
-                <p>Enroll in internationally certified online courses, multilingual, for all levels.</p>
-                <a href="https://sites.google.com/view/nataliabellanfoundation/courses" target="_blank" class="btn btn-primary">Explore Catalog</a>
+                <h3 data-i18n="cta.b2h">Elevate Your Team's Skills</h3>
+                <p data-i18n="cta.b2p">Enroll in internationally certified online courses, multilingual, for all levels.</p>
+                <a href="https://sites.google.com/view/nataliabellanfoundation/courses" target="_blank" class="btn btn-primary" data-i18n="cta.b2btn">Explore Catalog</a>
             </div>
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════════════
-         PROFESSIONAL FOOTER
-         ══════════════════════════════════════════════ -->
+    <!-- ── FOOTER ── -->
     <footer class="site-footer">
         <div class="footer-inner">
-
             <div class="footer-top">
-
-                <!-- Brand column -->
                 <div class="footer-brand">
                     <div class="footer-brand-wordmark">Dr. Natália Bellan</div>
                     <div class="footer-brand-sub">PhD</div>
                     <div class="footer-divider"></div>
-                    <p class="footer-brand-tagline">The world's first PhD in Regulatory Science/Regulatory Intelligence. Pioneering global expertise in pharma, medtech &amp; innovation since 2011.</p>
+                    <p class="footer-brand-tagline" data-i18n="footer.tagline">The world's first PhD in Regulatory Science/Regulatory Intelligence. Pioneering global expertise in pharma, medtech &amp; innovation since 2011.</p>
                     <div class="footer-social">
                         <a href="https://www.linkedin.com/in/nat%C3%A1lia-bellan-engtech-pharmd-mres-ph-d-15845823/" target="_blank" rel="noopener" title="LinkedIn">in</a>
                         <a href="https://www.youtube.com/@drnataliabellanfoundation" target="_blank" rel="noopener" title="YouTube">▶</a>
@@ -677,245 +665,544 @@
                         <a href="https://www.amazon.com/stores/author/B0DQHCD34L/allbooks" target="_blank" rel="noopener" title="Books on Amazon">📚</a>
                     </div>
                 </div>
-
-                <!-- Services column -->
                 <div class="footer-col">
-                    <h4>Services</h4>
+                    <h4 data-i18n="footer.services">Services</h4>
                     <ul>
-                        <li><a href="#services">Strategic Consulting</a></li>
-                        <li><a href="#services">Regulatory Intelligence</a></li>
+                        <li><a href="#services" data-i18n="svc.s1h">Strategic Consulting &amp; Intelligence</a></li>
+                        <li><a href="#services" data-i18n="glb.ri">Regulatory Intelligence</a></li>
                         <li><a href="#services">MSL &amp; KOL Management</a></li>
-                        <li><a href="#services">Clinical Trial Support</a></li>
-                        <li><a href="#services">Technical Defense</a></li>
+                        <li><a href="#services" data-i18n="glb.ct">Clinical Trial Support</a></li>
+                        <li><a href="#services" data-i18n="glb.td">Technical Defense</a></li>
                     </ul>
                 </div>
-
-                <!-- Education column -->
                 <div class="footer-col">
-                    <h4>Education</h4>
+                    <h4 data-i18n="footer.education">Education</h4>
                     <ul>
-                        <li><a href="https://sites.google.com/view/nataliabellanfoundation/courses" target="_blank" rel="noopener" class="footer-highlight">Online Courses ↗</a></li>
-                        <li><a href="https://sites.google.com/view/nataliabellanfoundation/courses" target="_blank" rel="noopener">Mentorship</a></li>
-                        <li><a href="https://sites.google.com/view/nataliabellanfoundation/courses" target="_blank" rel="noopener">Corporate Training</a></li>
+                        <li><a href="https://sites.google.com/view/nataliabellanfoundation/courses" target="_blank" rel="noopener" class="footer-highlight" data-i18n="hero.cta2">Online Courses ↗</a></li>
+                        <li><a href="https://sites.google.com/view/nataliabellanfoundation/courses" target="_blank" rel="noopener" data-i18n="hero.cta3">Mentorship</a></li>
+                        <li><a href="https://sites.google.com/view/nataliabellanfoundation/courses" target="_blank" rel="noopener" data-i18n="footer.training">Corporate Training</a></li>
                         <li><a href="https://www.researchgate.net/profile/Natalia-Bellan" target="_blank" rel="noopener">ResearchGate</a></li>
                         <li><a href="http://lattes.cnpq.br/0732463146415084" target="_blank" rel="noopener">CNPq Lattes</a></li>
                     </ul>
                 </div>
-
-                <!-- Connect column -->
                 <div class="footer-col">
-                    <h4>Connect</h4>
+                    <h4 data-i18n="footer.connect">Connect</h4>
                     <ul>
-                        <li><a href="#credentials">Credentials</a></li>
-                        <li><a href="#expertise">Expertise</a></li>
-                        <li><a href="#global">Global Reach</a></li>
-                        <li><a href="#contact">Get in Touch</a></li>
+                        <li><a href="#credentials" data-i18n="nav.credentials">Credentials</a></li>
+                        <li><a href="#expertise" data-i18n="nav.expertise">Expertise</a></li>
+                        <li><a href="#global" data-i18n="footer.globalreach">Global Reach</a></li>
+                        <li><a href="#contact" data-i18n="footer.getintouch">Get in Touch</a></li>
                     </ul>
                 </div>
-
-                <!-- Social column -->
                 <div class="footer-col">
-                    <h4>Social</h4>
+                    <h4 data-i18n="footer.social">Social</h4>
                     <ul>
                         <li><a href="https://www.linkedin.com/in/nat%C3%A1lia-bellan-engtech-pharmd-mres-ph-d-15845823/" target="_blank" rel="noopener">LinkedIn</a></li>
                         <li><a href="https://www.youtube.com/@drnataliabellanfoundation" target="_blank" rel="noopener">YouTube</a></li>
-                        <li><a href="https://www.amazon.com/stores/author/B0DQHCD34L/allbooks" target="_blank" rel="noopener">Books on Amazon</a></li>
+                        <li><a href="https://www.amazon.com/stores/author/B0DQHCD34L/allbooks" target="_blank" rel="noopener" data-i18n="footer.books">Books on Amazon</a></li>
                     </ul>
                 </div>
-
-            </div><!-- /footer-top -->
-
+            </div>
             <div class="footer-bottom">
                 <div class="footer-bottom-left">
-                    <p>&copy; 2026 Dr. Natália Bellan, PhD. All rights reserved.</p>
+                    <p>&copy; 2026 Dr. Natália Bellan, PhD. <span data-i18n="footer.rights">All rights reserved.</span></p>
                     <div class="footer-legal-links">
-                        <a href="https://nataliabellan.org/privacy-policy">Privacy Policy</a>
-                        <a href="https://nataliabellan.org/terms-of-use">Terms of Use</a>
-                        <a href="https://nataliabellan.org/cookie-notice">Cookie Notice</a>
-                        <a href="#" onclick="nbReopen();return false;">🍪 Cookie Preferences</a>
+                        <a href="https://nataliabellan.org/privacy-policy"  data-i18n="footer.privacy">Privacy Policy</a>
+                        <a href="https://nataliabellan.org/terms-of-use"    data-i18n="footer.terms">Terms of Use</a>
+                        <a href="https://nataliabellan.org/cookie-notice"   data-i18n="footer.cookies">Cookie Notice</a>
+                        <a href="#" onclick="nbReopen();return false;" data-i18n="footer.cookiepref">🍪 Cookie Preferences</a>
                     </div>
                 </div>
                 <div class="footer-bottom-right">
                     <a href="https://app-algoritmo.github.io/digital-solutions" target="_blank" rel="noopener" class="footer-devby">Developed by Digital Solutions</a>
                 </div>
             </div>
-
         </div>
     </footer>
 
-    <!-- ══════════════════════════════════════════════
-         COOKIE BANNER
-         ══════════════════════════════════════════════ -->
+    <!-- ── COOKIE BANNER ── -->
     <div id="nb-cookie-banner" role="dialog" aria-label="Cookie preferences" aria-live="polite">
         <div class="nb-card">
-
             <div class="nb-logo">
                 <div class="nb-logo-mark"><span>N</span></div>
                 <div class="nb-logo-text">
                     <span class="nb-logo-name">Dr. Natália Bellan</span>
                     <span class="nb-logo-sub">PhD</span>
-                    
                 </div>
             </div>
-
             <div class="nb-text">
-                <div class="nb-text-title">🍪 Privacy &amp; Cookies</div>
-                <p class="nb-text-body">
+                <div class="nb-text-title" data-i18n="cookie.title">🍪 Privacy &amp; Cookies</div>
+                <p class="nb-text-body" data-i18n="cookie.body">
                     We use cookies to analyze traffic and improve your experience. You can choose which ones to accept.
-                    Read our <a href="https://nataliabellan.org/privacy-policy" target="_blank">Privacy Policy</a>
-                    and <a href="https://nataliabellan.org/cookie-notice" target="_blank">Cookie Notice</a>.
+                    Read our <a href="https://nataliabellan.org/privacy-policy" target="_blank" data-i18n="footer.privacy">Privacy Policy</a>
+                    and <a href="https://nataliabellan.org/cookie-notice" target="_blank" data-i18n="footer.cookies">Cookie Notice</a>.
                 </p>
                 <div class="nb-toggles">
                     <label class="nb-toggle-item nb-required" title="Always active">
                         <input type="checkbox" id="nb-chk-essential" checked disabled>
-                        <span class="nb-toggle-label">Essential</span>
+                        <span class="nb-toggle-label" data-i18n="cookie.essential">Essential</span>
                     </label>
                     <label class="nb-toggle-item">
                         <input type="checkbox" id="nb-chk-analytics">
-                        <span class="nb-toggle-label">Analytics</span>
+                        <span class="nb-toggle-label" data-i18n="cookie.analytics">Analytics</span>
                     </label>
                     <label class="nb-toggle-item">
                         <input type="checkbox" id="nb-chk-functional">
-                        <span class="nb-toggle-label">Functional</span>
+                        <span class="nb-toggle-label" data-i18n="cookie.functional">Functional</span>
                     </label>
                     <label class="nb-toggle-item">
                         <input type="checkbox" id="nb-chk-marketing">
-                        <span class="nb-toggle-label">Marketing</span>
+                        <span class="nb-toggle-label" data-i18n="cookie.marketing">Marketing</span>
                     </label>
                 </div>
             </div>
-
             <div class="nb-actions">
-                <button class="nb-btn nb-btn-accept"  onclick="nbAcceptAll()">Accept All</button>
-                <button class="nb-btn nb-btn-save"    onclick="nbSaveChoice()">Save Choice</button>
-                <button class="nb-btn nb-btn-reject"  onclick="nbRejectAll()">Reject optional</button>
+                <button class="nb-btn nb-btn-accept"  onclick="nbAcceptAll()"  data-i18n="cookie.accept">Accept All</button>
+                <button class="nb-btn nb-btn-save"    onclick="nbSaveChoice()" data-i18n="cookie.save">Save Choice</button>
+                <button class="nb-btn nb-btn-reject"  onclick="nbRejectAll()"  data-i18n="cookie.reject">Reject optional</button>
             </div>
-
         </div>
     </div>
-
     <button id="nb-cookie-reopen" onclick="nbReopen()" aria-label="Open cookie preferences">
         🍪 Cookies
     </button>
 
     <!-- ── SCRIPTS ── -->
     <script>
-        /* ── Smooth scroll ── */
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', e => {
-                const href = anchor.getAttribute('href');
-                if (href === '#') return;
-                const target = document.querySelector(href);
-                if (target) { e.preventDefault(); target.scrollIntoView({ behavior:'smooth' }); }
-            });
+
+    /* ══════════════════════════════════════════════
+       i18n TRANSLATION SYSTEM
+       ══════════════════════════════════════════════ */
+    const translations = {
+
+      en: {
+        'nav.credentials': 'Credentials',
+        'nav.expertise':   'Expertise',
+        'nav.services':    'Services',
+        'nav.global':      'Global',
+        'nav.contact':     'Contact',
+        'hero.prefix':     'Professor',
+        'hero.subtitle':   'Global Authority in Regulatory Science &amp; Intelligence',
+        'hero.body':       'Transform regulatory challenges into global opportunities with pioneering expertise in pharma, medtech, and innovation.',
+        'hero.cta1':       'Get in Touch',
+        'hero.cta2':       'Online Courses',
+        'hero.cta3':       'Mentorship',
+        'cred.title1':     'Authority',
+        'cred.title2':     'Credentials',
+        'cred.sub':        'Pioneer in Creating a New Science for Global Success',
+        'cred.intro':      'The world\'s first and only PhD in Regulatory Science/Regulatory Intelligence, with research registered in 2011 that revolutionized the pharmaceutical industry.',
+        'cred.c1h':        'Excellence in Education',
+        'cred.c1p':        'Civil Engineering (CEFET-SP), Pharmacist-Biochemist (UNESP &amp; USC), Master\'s and Doctorate (USP).',
+        'cred.c2h':        'Reference Educator',
+        'cred.c2p':        '+20 years training &gt;3,000 professionals in global regulatory postgraduate programs.',
+        'cred.c3h':        'Innovation &amp; Recognition',
+        'cred.c3p':        'Worked on the regulatory revolution before age 30, balancing projects, teaching, and founding the "New Science."',
+        'exp.title1':      'Areas of',
+        'exp.title2':      'Expertise',
+        'exp.sub':         'Navigating Complex Regulatory Landscapes',
+        'exp.intro':       'Specialist in high-complexity and innovation sectors, providing precise guidance in:',
+        'exp.c1h':         'Pharmaceuticals',
+        'exp.c1p':         'Drugs, Biologics, Vaccines, Oncology, Rare Diseases.',
+        'exp.c2h':         'Medical Technologies',
+        'exp.c2p':         'Devices, SaMD, IVD, Robotics, Ophthalmology, Neuroscience.',
+        'exp.c3h':         'Advanced Technologies',
+        'exp.c3p':         'Quantum Products, Cosmetics, Nutraceuticals, Reference Standards.',
+        'svc.title1':      'Professional Services —',
+        'svc.title2':      'Your Route to Success',
+        'svc.sub':         'Complete Solutions for Global Ambitions',
+        'svc.s1h':         'Strategic Consulting &amp; Intelligence',
+        'svc.s1a':         'Regulatory Intelligence &amp; Business Strategy',
+        'svc.s1ap':        'Actionable insights for CEOs, Boards, and Investors.',
+        'svc.s1b':         'Regulatory Affairs Across the Product Lifecycle',
+        'svc.s1bp':        'Comprehensive support from development to post-commercialization.',
+        'svc.s1c':         'Technical &amp; Regulatory Defense',
+        'svc.s1cp':        'Representation in patent disputes and recalls.',
+        'svc.s2h':         'MSL &amp; KOL Management',
+        'svc.s2a':         'MSL Strategy &amp; Training',
+        'svc.s2ap':        'Programs for scientific communication and compliance.',
+        'svc.s2b':         'KOL Mapping &amp; Engagement',
+        'svc.s2bp':        'Analysis and management of global relationships with opinion leaders.',
+        'svc.s2c':         'Scientific Exchange',
+        'svc.s2cp':        'Ethical dialogues between industry and the scientific community.',
+        'svc.s3h':         'Science &amp; Education',
+        'svc.s3a':         'Applied Scientific Research',
+        'svc.s3ap':        'Support for global registrations and Clinical Trials.',
+        'svc.s3b':         'Educational Program Development',
+        'svc.s3bp':        'Creation and accreditation of programs from undergraduate to doctorate.',
+        'svc.s3c':         'Online Corporate Training',
+        'svc.s3cp':        'Customized courses in multiple languages, aligned with FDA/EMA/ANVISA.',
+        'glb.title1':      'Global Experience &amp;',
+        'glb.title2':      'Partnerships',
+        'glb.sub':         'Trusted Partner for Global Leaders',
+        'glb.stat1':       'Countries',
+        'glb.stat2':       'Professionals Trained',
+        'glb.stat3':       'Years of Experience',
+        'glb.ind':         'Industrial Projects:',
+        'glb.edu':         'Educational Institutions:',
+        'glb.ops':         'Global Operations:',
+        'glb.ri':          'Regulatory Intelligence',
+        'glb.ct':          'Clinical Trial Support',
+        'glb.td':          'Technical Defense',
+        'cta.title':       'Ready to Expand Your Business Globally?',
+        'cta.body':        'Leverage the world\'s leading expert in Regulatory Science to reduce risks and accelerate growth.',
+        'cta.b1h':         'Expert Consultation',
+        'cta.b1p':         'Connect for consulting, speaking engagements, training, and strategic partnerships.',
+        'cta.b2h':         'Elevate Your Team\'s Skills',
+        'cta.b2p':         'Enroll in internationally certified online courses, multilingual, for all levels.',
+        'cta.b2btn':       'Explore Catalog',
+        'footer.tagline':  'The world\'s first PhD in Regulatory Science/Regulatory Intelligence. Pioneering global expertise in pharma, medtech &amp; innovation since 2011.',
+        'footer.services': 'Services',
+        'footer.education':'Education',
+        'footer.training': 'Corporate Training',
+        'footer.connect':  'Connect',
+        'footer.globalreach':'Global Reach',
+        'footer.getintouch':'Get in Touch',
+        'footer.social':   'Social',
+        'footer.books':    'Books on Amazon',
+        'footer.rights':   'All rights reserved.',
+        'footer.privacy':  'Privacy Policy',
+        'footer.terms':    'Terms of Use',
+        'footer.cookies':  'Cookie Notice',
+        'footer.cookiepref':'🍪 Cookie Preferences',
+        'cookie.title':    '🍪 Privacy &amp; Cookies',
+        'cookie.body':     'We use cookies to analyze traffic and improve your experience. You can choose which ones to accept. Read our',
+        'cookie.essential':'Essential',
+        'cookie.analytics':'Analytics',
+        'cookie.functional':'Functional',
+        'cookie.marketing':'Marketing',
+        'cookie.accept':   'Accept All',
+        'cookie.save':     'Save Choice',
+        'cookie.reject':   'Reject optional',
+      },
+
+      pt: {
+        'nav.credentials': 'Credenciais',
+        'nav.expertise':   'Expertise',
+        'nav.services':    'Serviços',
+        'nav.global':      'Global',
+        'nav.contact':     'Contacto',
+        'hero.prefix':     'Professora',
+        'hero.subtitle':   'Autoridade Global em Ciência Regulatória &amp; Inteligência',
+        'hero.body':       'Transforme desafios regulatórios em oportunidades globais com expertise pioneira em pharma, medtech e inovação.',
+        'hero.cta1':       'Fale Connosco',
+        'hero.cta2':       'Cursos Online',
+        'hero.cta3':       'Mentoria',
+        'cred.title1':     'Credenciais de',
+        'cred.title2':     'Autoridade',
+        'cred.sub':        'Pioneira na Criação de uma Nova Ciência para o Sucesso Global',
+        'cred.intro':      'O primeiro e único PhD do mundo em Ciência Regulatória/Inteligência Regulatória, com investigação registada em 2011 que revolucionou a indústria farmacêutica.',
+        'cred.c1h':        'Excelência Académica',
+        'cred.c1p':        'Engenharia Civil (CEFET-SP), Farmacêutica-Bioquímica (UNESP &amp; USC), Mestrado e Doutoramento (USP).',
+        'cred.c2h':        'Educadora de Referência',
+        'cred.c2p':        '+20 anos a formar &gt;3.000 profissionais em programas de pós-graduação regulatória global.',
+        'cred.c3h':        'Inovação &amp; Reconhecimento',
+        'cred.c3p':        'Trabalhou na revolução regulatória antes dos 30 anos, conciliando projetos, docência e a fundação da "Nova Ciência."',
+        'exp.title1':      'Áreas de',
+        'exp.title2':      'Expertise',
+        'exp.sub':         'Navegando Paisagens Regulatórias Complexas',
+        'exp.intro':       'Especialista em setores de alta complexidade e inovação, oferecendo orientação precisa em:',
+        'exp.c1h':         'Farmacêuticos',
+        'exp.c1p':         'Medicamentos, Biológicos, Vacinas, Oncologia, Doenças Raras.',
+        'exp.c2h':         'Tecnologias Médicas',
+        'exp.c2p':         'Dispositivos, SaMD, IVD, Robótica, Oftalmologia, Neurociência.',
+        'exp.c3h':         'Tecnologias Avançadas',
+        'exp.c3p':         'Produtos Quânticos, Cosméticos, Nutracêuticos, Padrões de Referência.',
+        'svc.title1':      'Serviços Profissionais —',
+        'svc.title2':      'O Seu Caminho para o Sucesso',
+        'svc.sub':         'Soluções Completas para Ambições Globais',
+        'svc.s1h':         'Consultoria Estratégica &amp; Inteligência',
+        'svc.s1a':         'Inteligência Regulatória &amp; Estratégia de Negócio',
+        'svc.s1ap':        'Insights acionáveis para CEOs, Conselhos e Investidores.',
+        'svc.s1b':         'Assuntos Regulatórios ao Longo do Ciclo de Vida do Produto',
+        'svc.s1bp':        'Suporte abrangente do desenvolvimento à pós-comercialização.',
+        'svc.s1c':         'Defesa Técnica &amp; Regulatória',
+        'svc.s1cp':        'Representação em disputas de patentes e recalls.',
+        'svc.s2h':         'Gestão de MSL &amp; KOL',
+        'svc.s2a':         'Estratégia &amp; Formação MSL',
+        'svc.s2ap':        'Programas de comunicação científica e conformidade.',
+        'svc.s2b':         'Mapeamento &amp; Envolvimento de KOL',
+        'svc.s2bp':        'Análise e gestão de relações globais com líderes de opinião.',
+        'svc.s2c':         'Intercâmbio Científico',
+        'svc.s2cp':        'Diálogos éticos entre a indústria e a comunidade científica.',
+        'svc.s3h':         'Ciência &amp; Educação',
+        'svc.s3a':         'Investigação Científica Aplicada',
+        'svc.s3ap':        'Apoio a registos globais e Ensaios Clínicos.',
+        'svc.s3b':         'Desenvolvimento de Programas Educativos',
+        'svc.s3bp':        'Criação e acreditação de programas da licenciatura ao doutoramento.',
+        'svc.s3c':         'Formação Corporativa Online',
+        'svc.s3cp':        'Cursos personalizados em múltiplos idiomas, alinhados com FDA/EMA/ANVISA.',
+        'glb.title1':      'Experiência Global &amp;',
+        'glb.title2':      'Parcerias',
+        'glb.sub':         'Parceira de Confiança para Líderes Globais',
+        'glb.stat1':       'Países',
+        'glb.stat2':       'Profissionais Formados',
+        'glb.stat3':       'Anos de Experiência',
+        'glb.ind':         'Projetos Industriais:',
+        'glb.edu':         'Instituições Educativas:',
+        'glb.ops':         'Operações Globais:',
+        'glb.ri':          'Inteligência Regulatória',
+        'glb.ct':          'Apoio a Ensaios Clínicos',
+        'glb.td':          'Defesa Técnica',
+        'cta.title':       'Pronta para Expandir o Seu Negócio Globalmente?',
+        'cta.body':        'Aproveite a expertise da principal especialista mundial em Ciência Regulatória para reduzir riscos e acelerar o crescimento.',
+        'cta.b1h':         'Consultoria Especializada',
+        'cta.b1p':         'Contacte para consultoria, palestras, formação e parcerias estratégicas.',
+        'cta.b2h':         'Eleve as Competências da Sua Equipa',
+        'cta.b2p':         'Inscreva-se em cursos online certificados internacionalmente, multilingues, para todos os níveis.',
+        'cta.b2btn':       'Explorar Catálogo',
+        'footer.tagline':  'O primeiro e único PhD do mundo em Ciência Regulatória/Inteligência Regulatória. Expertise global pioneira em pharma, medtech &amp; inovação desde 2011.',
+        'footer.services': 'Serviços',
+        'footer.education':'Educação',
+        'footer.training': 'Formação Corporativa',
+        'footer.connect':  'Contacto',
+        'footer.globalreach':'Alcance Global',
+        'footer.getintouch':'Fale Connosco',
+        'footer.social':   'Redes Sociais',
+        'footer.books':    'Livros na Amazon',
+        'footer.rights':   'Todos os direitos reservados.',
+        'footer.privacy':  'Política de Privacidade',
+        'footer.terms':    'Termos de Uso',
+        'footer.cookies':  'Aviso de Cookies',
+        'footer.cookiepref':'🍪 Preferências de Cookies',
+        'cookie.title':    '🍪 Privacidade &amp; Cookies',
+        'cookie.body':     'Utilizamos cookies para analisar o tráfego e melhorar a sua experiência. Pode escolher quais aceitar. Leia a nossa',
+        'cookie.essential':'Essencial',
+        'cookie.analytics':'Analíticos',
+        'cookie.functional':'Funcionais',
+        'cookie.marketing':'Marketing',
+        'cookie.accept':   'Aceitar Tudo',
+        'cookie.save':     'Guardar Escolha',
+        'cookie.reject':   'Rejeitar opcionais',
+      },
+
+      es: {
+        'nav.credentials': 'Credenciales',
+        'nav.expertise':   'Expertise',
+        'nav.services':    'Servicios',
+        'nav.global':      'Global',
+        'nav.contact':     'Contacto',
+        'hero.prefix':     'Profesora',
+        'hero.subtitle':   'Autoridad Global en Ciencia Regulatoria &amp; Inteligencia',
+        'hero.body':       'Transforme desafíos regulatorios en oportunidades globales con experiencia pionera en pharma, medtech e innovación.',
+        'hero.cta1':       'Contáctenos',
+        'hero.cta2':       'Cursos Online',
+        'hero.cta3':       'Mentoría',
+        'cred.title1':     'Credenciales de',
+        'cred.title2':     'Autoridad',
+        'cred.sub':        'Pionera en la Creación de una Nueva Ciencia para el Éxito Global',
+        'cred.intro':      'El primer y único PhD del mundo en Ciencia Regulatoria/Inteligencia Regulatoria, con investigación registrada en 2011 que revolucionó la industria farmacéutica.',
+        'cred.c1h':        'Excelencia Académica',
+        'cred.c1p':        'Ingeniería Civil (CEFET-SP), Farmacéutica-Bioquímica (UNESP &amp; USC), Maestría y Doctorado (USP).',
+        'cred.c2h':        'Educadora de Referencia',
+        'cred.c2p':        '+20 años formando &gt;3.000 profesionales en programas de posgrado regulatorio global.',
+        'cred.c3h':        'Innovación &amp; Reconocimiento',
+        'cred.c3p':        'Trabajó en la revolución regulatoria antes de los 30 años, combinando proyectos, docencia y la fundación de la "Nueva Ciencia."',
+        'exp.title1':      'Áreas de',
+        'exp.title2':      'Expertise',
+        'exp.sub':         'Navegando Paisajes Regulatorios Complejos',
+        'exp.intro':       'Especialista en sectores de alta complejidad e innovación, ofreciendo orientación precisa en:',
+        'exp.c1h':         'Farmacéuticos',
+        'exp.c1p':         'Medicamentos, Biológicos, Vacunas, Oncología, Enfermedades Raras.',
+        'exp.c2h':         'Tecnologías Médicas',
+        'exp.c2p':         'Dispositivos, SaMD, IVD, Robótica, Oftalmología, Neurociencia.',
+        'exp.c3h':         'Tecnologías Avanzadas',
+        'exp.c3p':         'Productos Cuánticos, Cosméticos, Nutracéuticos, Estándares de Referencia.',
+        'svc.title1':      'Servicios Profesionales —',
+        'svc.title2':      'Su Ruta al Éxito',
+        'svc.sub':         'Soluciones Completas para Ambiciones Globales',
+        'svc.s1h':         'Consultoría Estratégica &amp; Inteligencia',
+        'svc.s1a':         'Inteligencia Regulatoria &amp; Estrategia de Negocio',
+        'svc.s1ap':        'Perspectivas accionables para CEOs, Juntas e Inversores.',
+        'svc.s1b':         'Asuntos Regulatorios a lo Largo del Ciclo de Vida del Producto',
+        'svc.s1bp':        'Soporte integral desde el desarrollo hasta la post-comercialización.',
+        'svc.s1c':         'Defensa Técnica &amp; Regulatoria',
+        'svc.s1cp':        'Representación en disputas de patentes y recalls.',
+        'svc.s2h':         'Gestión de MSL &amp; KOL',
+        'svc.s2a':         'Estrategia &amp; Formación MSL',
+        'svc.s2ap':        'Programas de comunicación científica y cumplimiento.',
+        'svc.s2b':         'Mapeo &amp; Engagement de KOL',
+        'svc.s2bp':        'Análisis y gestión de relaciones globales con líderes de opinión.',
+        'svc.s2c':         'Intercambio Científico',
+        'svc.s2cp':        'Diálogos éticos entre la industria y la comunidad científica.',
+        'svc.s3h':         'Ciencia &amp; Educación',
+        'svc.s3a':         'Investigación Científica Aplicada',
+        'svc.s3ap':        'Apoyo a registros globales y Ensayos Clínicos.',
+        'svc.s3b':         'Desarrollo de Programas Educativos',
+        'svc.s3bp':        'Creación y acreditación de programas desde pregrado hasta doctorado.',
+        'svc.s3c':         'Formación Corporativa Online',
+        'svc.s3cp':        'Cursos personalizados en múltiples idiomas, alineados con FDA/EMA/ANVISA.',
+        'glb.title1':      'Experiencia Global &amp;',
+        'glb.title2':      'Alianzas',
+        'glb.sub':         'Socia de Confianza para Líderes Globales',
+        'glb.stat1':       'Países',
+        'glb.stat2':       'Profesionales Formados',
+        'glb.stat3':       'Años de Experiencia',
+        'glb.ind':         'Proyectos Industriales:',
+        'glb.edu':         'Instituciones Educativas:',
+        'glb.ops':         'Operaciones Globales:',
+        'glb.ri':          'Inteligencia Regulatoria',
+        'glb.ct':          'Apoyo a Ensayos Clínicos',
+        'glb.td':          'Defensa Técnica',
+        'cta.title':       '¿Lista para Expandir su Negocio Globalmente?',
+        'cta.body':        'Aproveche la experiencia de la principal experta mundial en Ciencia Regulatoria para reducir riesgos y acelerar el crecimiento.',
+        'cta.b1h':         'Consultoría Especializada',
+        'cta.b1p':         'Contáctenos para consultoría, conferencias, formación y alianzas estratégicas.',
+        'cta.b2h':         'Eleve las Competencias de su Equipo',
+        'cta.b2p':         'Inscríbase en cursos online certificados internacionalmente, multilingues, para todos los niveles.',
+        'cta.b2btn':       'Explorar Catálogo',
+        'footer.tagline':  'El primer y único PhD del mundo en Ciencia Regulatoria/Inteligencia Regulatoria. Experiencia global pionera en pharma, medtech e innovación desde 2011.',
+        'footer.services': 'Servicios',
+        'footer.education':'Educación',
+        'footer.training': 'Formación Corporativa',
+        'footer.connect':  'Contacto',
+        'footer.globalreach':'Alcance Global',
+        'footer.getintouch':'Contáctenos',
+        'footer.social':   'Redes Sociales',
+        'footer.books':    'Libros en Amazon',
+        'footer.rights':   'Todos los derechos reservados.',
+        'footer.privacy':  'Política de Privacidad',
+        'footer.terms':    'Términos de Uso',
+        'footer.cookies':  'Aviso de Cookies',
+        'footer.cookiepref':'🍪 Preferencias de Cookies',
+        'cookie.title':    '🍪 Privacidad &amp; Cookies',
+        'cookie.body':     'Utilizamos cookies para analizar el tráfico y mejorar su experiencia. Puede elegir cuáles aceptar. Lea nuestra',
+        'cookie.essential':'Esencial',
+        'cookie.analytics':'Analíticas',
+        'cookie.functional':'Funcionales',
+        'cookie.marketing':'Marketing',
+        'cookie.accept':   'Aceptar Todo',
+        'cookie.save':     'Guardar Elección',
+        'cookie.reject':   'Rechazar opcionales',
+      }
+    };
+
+    /* Legal page links per language */
+    const legalLinks = {
+      en: { privacy: 'privacy-policy',  terms: 'terms-of-use',   cookies: 'cookie-notice' },
+      pt: { privacy: 'politica-de-privacidade', terms: 'termos-de-uso', cookies: 'aviso-de-cookies' },
+      es: { privacy: 'politica-de-privacidad',  terms: 'terminos-de-uso', cookies: 'aviso-de-cookies-es' }
+    };
+
+    let currentLang = 'en';
+
+    function applyTranslations(lang) {
+      const t = translations[lang];
+      if (!t) return;
+
+      /* Text nodes */
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) el.innerHTML = t[key];
+      });
+
+      /* Update legal footer links */
+      const ll = legalLinks[lang];
+      const base = 'https://nataliabellan.org/';
+      const privacyLinks = document.querySelectorAll('a[href*="privacy-policy"], a[href*="politica-de-privacidade"], a[href*="politica-de-privacidad"]');
+      privacyLinks.forEach(a => { a.href = base + ll.privacy; });
+      const termsLinks = document.querySelectorAll('a[href*="terms-of-use"], a[href*="termos-de-uso"], a[href*="terminos-de-uso"]');
+      termsLinks.forEach(a => { a.href = base + ll.terms; });
+      const cookieLinks = document.querySelectorAll('a[href*="cookie-notice"], a[href*="aviso-de-cookies"]');
+      cookieLinks.forEach(a => { a.href = base + ll.cookies; });
+
+      /* Update <html lang> */
+      document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
+
+      /* Update <title> */
+      const titles = {
+        en: 'Dr. Natália Bellan, PhD - Global Authority in Regulatory Science',
+        pt: 'Dr. Natália Bellan, PhD - Autoridade Global em Ciência Regulatória',
+        es: 'Dr. Natália Bellan, PhD - Autoridad Global en Ciencia Regulatoria'
+      };
+      document.title = titles[lang];
+
+      /* Active button highlight */
+      ['en','pt','es'].forEach(l => {
+        const el = document.getElementById('lang-' + l);
+        if (el) el.classList.toggle('active', l === lang);
+      });
+
+      /* Save preference */
+      try { localStorage.setItem('nb_lang', lang); } catch(e) {}
+      currentLang = lang;
+    }
+
+    function setLang(lang) {
+      applyTranslations(lang);
+      /* Smooth scroll to top only if user clicked a lang button (not on init) */
+    }
+
+    /* Init — detect saved preference or browser language */
+    (function() {
+      let savedLang = 'en';
+      try { savedLang = localStorage.getItem('nb_lang') || 'en'; } catch(e) {}
+      if (!['en','pt','es'].includes(savedLang)) savedLang = 'en';
+      applyTranslations(savedLang);
+    })();
+
+
+    /* ── Smooth scroll ── */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', e => {
+            const href = anchor.getAttribute('href');
+            if (href === '#') return;
+            const target = document.querySelector(href);
+            if (target) { e.preventDefault(); target.scrollIntoView({ behavior:'smooth' }); }
         });
+    });
 
-        /* ── Card fade-in on scroll ── */
-        const cardObserver = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            cardObserver.observe(el);
+    /* ── Card fade-in on scroll ── */
+    const cardObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
         });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        cardObserver.observe(el);
+    });
 
-        /* ══════════════════════════════
-           COOKIE BANNER LOGIC
-           ══════════════════════════════ */
-        (function () {
-            var STORE_KEY = 'nb_consent';
-            var banner    = document.getElementById('nb-cookie-banner');
-            var reopen    = document.getElementById('nb-cookie-reopen');
-
-            function pushConsent(analytics, functional, marketing) {
-                if (typeof gtag === 'function') {
-                    gtag('consent', 'update', {
-                        analytics_storage:    analytics  ? 'granted' : 'denied',
-                        functionality_storage:functional ? 'granted' : 'denied',
-                        ad_storage:           marketing  ? 'granted' : 'denied',
-                        ad_user_data:         marketing  ? 'granted' : 'denied',
-                        ad_personalization:   marketing  ? 'granted' : 'denied',
-                    });
-                }
+    /* ── Cookie Banner ── */
+    (function () {
+        var STORE_KEY = 'nb_consent';
+        var banner    = document.getElementById('nb-cookie-banner');
+        var reopen    = document.getElementById('nb-cookie-reopen');
+        function pushConsent(analytics, functional, marketing) {
+            if (typeof gtag === 'function') {
+                gtag('consent', 'update', {
+                    analytics_storage:    analytics  ? 'granted' : 'denied',
+                    functionality_storage:functional ? 'granted' : 'denied',
+                    ad_storage:           marketing  ? 'granted' : 'denied',
+                    ad_user_data:         marketing  ? 'granted' : 'denied',
+                    ad_personalization:   marketing  ? 'granted' : 'denied',
+                });
             }
+        }
+        function saveConsent(analytics, functional, marketing) {
+            try { localStorage.setItem(STORE_KEY, JSON.stringify({ analytics, functional, marketing, timestamp: new Date().toISOString() })); } catch(e) {}
+            pushConsent(analytics, functional, marketing);
+            hideBanner();
+        }
+        function showBanner() { banner.classList.add('nb-visible'); reopen.style.display = 'none'; }
+        function hideBanner() { banner.classList.remove('nb-visible'); setTimeout(() => { reopen.style.display = 'flex'; }, 600); }
+        window.nbAcceptAll  = function() { document.getElementById('nb-chk-analytics').checked = true; document.getElementById('nb-chk-functional').checked = true; document.getElementById('nb-chk-marketing').checked = true; saveConsent(true,true,true); };
+        window.nbRejectAll  = function() { document.getElementById('nb-chk-analytics').checked = false; document.getElementById('nb-chk-functional').checked = false; document.getElementById('nb-chk-marketing').checked = false; saveConsent(false,false,false); };
+        window.nbSaveChoice = function() { saveConsent(document.getElementById('nb-chk-analytics').checked, document.getElementById('nb-chk-functional').checked, document.getElementById('nb-chk-marketing').checked); };
+        window.nbReopen     = function() {
+            try { var c = JSON.parse(localStorage.getItem(STORE_KEY) || '{}'); document.getElementById('nb-chk-analytics').checked = !!c.analytics; document.getElementById('nb-chk-functional').checked = !!c.functional; document.getElementById('nb-chk-marketing').checked = !!c.marketing; } catch(e) {}
+            reopen.style.display = 'none'; showBanner();
+        };
+        var stored = null;
+        try { stored = localStorage.getItem(STORE_KEY); } catch(e) {}
+        if (!stored) { setTimeout(showBanner, 900); }
+        else { try { var c = JSON.parse(stored); pushConsent(!!c.analytics, !!c.functional, !!c.marketing); } catch(e) {} reopen.style.display = 'flex'; }
+    })();
 
-            function saveConsent(analytics, functional, marketing) {
-                try {
-                    localStorage.setItem(STORE_KEY, JSON.stringify({
-                        analytics, functional, marketing,
-                        timestamp: new Date().toISOString()
-                    }));
-                } catch(e) {}
-                pushConsent(analytics, functional, marketing);
-                hideBanner();
-            }
-
-            function showBanner() {
-                banner.classList.add('nb-visible');
-                reopen.style.display = 'none';
-            }
-
-            function hideBanner() {
-                banner.classList.remove('nb-visible');
-                setTimeout(() => { reopen.style.display = 'flex'; }, 600);
-            }
-
-            window.nbAcceptAll = function () {
-                document.getElementById('nb-chk-analytics').checked  = true;
-                document.getElementById('nb-chk-functional').checked = true;
-                document.getElementById('nb-chk-marketing').checked  = true;
-                saveConsent(true, true, true);
-            };
-
-            window.nbRejectAll = function () {
-                document.getElementById('nb-chk-analytics').checked  = false;
-                document.getElementById('nb-chk-functional').checked = false;
-                document.getElementById('nb-chk-marketing').checked  = false;
-                saveConsent(false, false, false);
-            };
-
-            window.nbSaveChoice = function () {
-                saveConsent(
-                    document.getElementById('nb-chk-analytics').checked,
-                    document.getElementById('nb-chk-functional').checked,
-                    document.getElementById('nb-chk-marketing').checked
-                );
-            };
-
-            window.nbReopen = function () {
-                try {
-                    var saved = JSON.parse(localStorage.getItem(STORE_KEY) || '{}');
-                    document.getElementById('nb-chk-analytics').checked  = !!saved.analytics;
-                    document.getElementById('nb-chk-functional').checked = !!saved.functional;
-                    document.getElementById('nb-chk-marketing').checked  = !!saved.marketing;
-                } catch(e) {}
-                reopen.style.display = 'none';
-                showBanner();
-            };
-
-            /* ── Init ── */
-            var stored = null;
-            try { stored = localStorage.getItem(STORE_KEY); } catch(e) {}
-
-            if (!stored) {
-                setTimeout(showBanner, 900);
-            } else {
-                try {
-                    var c = JSON.parse(stored);
-                    pushConsent(!!c.analytics, !!c.functional, !!c.marketing);
-                } catch(e) {}
-                reopen.style.display = 'flex';
-            }
-        })();
     </script>
-
 </body>
 </html>
