@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Natália Bellan - Global Authority in Regulatory Science</title>
+    <title>Dr. Natália Bellan, PhD - Global Authority in Regulatory Science</title>
     <meta name="description" content="Pioneer in Regulatory Science and Regulatory Intelligence. Strategic consulting for pharma, medtech, and global innovation.">
 
     <!-- Google tag (gtag.js) — with default consent denied until user chooses -->
@@ -83,6 +83,12 @@
         .nav { display:flex; gap:2rem; align-items:center; }
         .nav a { color:var(--text-dark); text-decoration:none; font-weight:500; font-size:0.9rem; transition:var(--transition); }
         .nav a:hover { color:var(--primary-blue); }
+
+        .lang-switcher { display:flex; align-items:center; gap:0.25rem; margin-left:1.5rem; padding-left:1.5rem; border-left:1px solid var(--gray-100); }
+        .lang-switcher a { font-size:0.75rem; font-weight:600; color:var(--gray-400); text-decoration:none; padding:0.25rem 0.5rem; border-radius:4px; transition:var(--transition); }
+        .lang-switcher a:hover { color:var(--primary-blue); }
+        .lang-switcher a.active { color:var(--primary-blue); background:var(--gray-100); }
+        .lang-sep { font-size:0.7rem; color:var(--gray-400); }
 
         /* ── BUTTONS ── */
         .btn {
@@ -352,6 +358,7 @@
         @media (max-width: 768px) {
             .hero-content h1 { font-size:2.5rem; }
             .nav { display:none; }
+            .lang-switcher { margin-left:0; padding-left:0; border-left:none; }
             .grid { grid-template-columns:1fr; }
             .cta-grid { grid-template-columns:1fr; }
             .footer-top { grid-template-columns: 1fr 1fr; }
@@ -497,7 +504,7 @@
 
     <!-- ── HEADER ── -->
     <header class="header">
-        <div class="logo">Dr. Natália Bellan</div>
+        <div class="logo">Dr. Natália Bellan, PhD</div>
         <nav class="nav">
             <a href="#credentials">Credentials</a>
             <a href="#expertise">Expertise</a>
@@ -505,13 +512,20 @@
             <a href="#global">Global</a>
             <a href="#contact">Contact</a>
         </nav>
+        <div class="lang-switcher">
+            <a href="https://nataliabellan.org" class="active">EN</a>
+            <span class="lang-sep">|</span>
+            <a href="https://nataliabellan.org/pt">PT</a>
+            <span class="lang-sep">|</span>
+            <a href="https://nataliabellan.org/es">ES</a>
+        </div>
     </header>
 
     <!-- ── HERO ── -->
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1>Professor <span class="highlight">Dr. Natália Bellan</span></h1>
+                <h1>Professor <span class="highlight">Dr. Natália Bellan, PhD</span></h1>
                 <p class="subtitle">Global Authority in Regulatory Science &amp; Intelligence</p>
                 <p>Transform regulatory challenges into global opportunities with pioneering expertise in pharma, medtech, and innovation.</p>
                 <div class="hero-cta">
@@ -699,12 +713,12 @@
                     </ul>
                 </div>
 
-                 <!-- Social Network -->
+                <!-- Social column -->
                 <div class="footer-col">
                     <h4>Social</h4>
                     <ul>
-                        <li><a href="https://www.linkedin.com/in/nat%C3%A1lia-bellan-engtech-pharmd-mres-ph-d-15845823/">Linkedin</a></li>
-                        <li><a href="https://www.youtube.com/@drnataliabellanfoundation">Youtube</a></li>
+                        <li><a href="https://www.linkedin.com/in/nat%C3%A1lia-bellan-engtech-pharmd-mres-ph-d-15845823/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://www.youtube.com/@drnataliabellanfoundation" target="_blank" rel="noopener">YouTube</a></li>
                         <li><a href="https://www.amazon.com/stores/author/B0DQHCD34L/allbooks" target="_blank" rel="noopener">Books on Amazon</a></li>
                     </ul>
                 </div>
@@ -713,7 +727,7 @@
 
             <div class="footer-bottom">
                 <div class="footer-bottom-left">
-                    <p>&copy; 2026 Dr. Natália Bellan PhD. All rights reserved.</p>
+                    <p>&copy; 2026 Dr. Natália Bellan, PhD. All rights reserved.</p>
                     <div class="footer-legal-links">
                         <a href="https://nataliabellan.org/privacy-policy">Privacy Policy</a>
                         <a href="https://nataliabellan.org/terms-of-use">Terms of Use</a>
@@ -740,6 +754,7 @@
                 <div class="nb-logo-text">
                     <span class="nb-logo-name">Dr. Natália Bellan</span>
                     <span class="nb-logo-sub">PhD</span>
+                    
                 </div>
             </div>
 
