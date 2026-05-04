@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos de Uso — Dr. Natália Bellan, PhD</title>
+    <meta name="description" content="Termos de Uso da Dr. Natália Bellan, PhD. Regras e condições de utilização do nosso sítio web e serviços.">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZV55ZMGWNB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZV55ZMGWNB');
+    </script>
+    <style>
+        :root {
+            --navy:       #001F3F;
+            --navy-deep:  #001228;
+            --navy-mid:   #002f5e;
+            --teal:       #00897B;
+            --teal-light: #00a896;
+            --white:      #FFFFFF;
+            --off-white:  #F8F9FA;
+            --gray-100:   #EEF0F3;
+            --gray-400:   #8C9BAB;
+            --gray-600:   #4A5568;
+            --gray-800:   #2D3748;
+            --shadow-sm:  0 2px 12px rgba(0,31,63,0.07);
+            --shadow-md:  0 8px 32px rgba(0,31,63,0.13);
+            --radius:     12px;
+            --transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+        }
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family:'DM Sans',sans-serif; background:var(--white); color:var(--gray-800); line-height:1.75; overflow-x:hidden; }
+
+        #progress-bar { position:fixed; top:0; left:0; height:3px; background:linear-gradient(90deg,var(--navy),var(--navy-mid)); z-index:9999; width:0%; transition:width 0.1s linear; }
+
+        .site-header { position:fixed; top:0; left:0; right:0; z-index:100; padding:1rem 2rem; display:flex; align-items:center; justify-content:space-between; background:rgba(255,255,255,0.96); backdrop-filter:blur(14px); border-bottom:1px solid var(--gray-100); box-shadow:var(--shadow-sm); }
+        .header-logo { display:flex; align-items:center; gap:0.6rem; text-decoration:none; }
+        .header-logo-mark { width:36px; height:36px; border-radius:8px; background:linear-gradient(135deg,var(--navy),var(--navy-mid)); display:flex; align-items:center; justify-content:center; }
+        .header-logo-mark span { color:var(--teal-light); font-family:'DM Serif Display',serif; font-size:1rem; font-style:italic; }
+        .header-logo-text { font-weight:700; font-size:0.95rem; color:var(--navy); line-height:1.2; }
+        .header-logo-text small { display:block; font-weight:400; font-size:0.7rem; color:var(--gray-400); letter-spacing:0.08em; text-transform:uppercase; }
+        .header-right { display:flex; align-items:center; gap:1rem; }
+        .header-back { display:inline-flex; align-items:center; gap:0.4rem; font-size:0.85rem; font-weight:500; color:var(--navy); text-decoration:none; padding:0.45rem 1rem; border:1.5px solid var(--gray-100); border-radius:50px; transition:var(--transition); }
+        .header-back:hover { border-color:var(--navy); background:var(--navy); color:var(--white); }
+        .lang-switcher { display:flex; align-items:center; gap:0.25rem; }
+        .lang-switcher a { font-size:0.75rem; font-weight:600; color:var(--gray-400); text-decoration:none; padding:0.25rem 0.5rem; border-radius:4px; transition:var(--transition); }
+        .lang-switcher a:hover { color:var(--navy); }
+        .lang-switcher a.active { color:var(--navy); background:var(--gray-100); }
+        .lang-sep { font-size:0.7rem; color:var(--gray-400); }
+
+        .policy-hero { margin-top:65px; padding:5rem 2rem 4rem; background:linear-gradient(135deg,#000d1f 0%,var(--navy) 55%,#002952 100%); position:relative; overflow:hidden; }
+        .policy-hero::before { content:''; position:absolute; top:-30%; left:-5%; width:500px; height:500px; border-radius:50%; background:radial-gradient(circle,rgba(0,31,63,0.5) 0%,transparent 70%); pointer-events:none; }
+        .policy-hero::after { content:''; position:absolute; bottom:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,rgba(255,255,255,0.1),transparent); }
+        .policy-hero-inner { max-width:860px; margin:0 auto; position:relative; z-index:1; }
+        .policy-badge { display:inline-flex; align-items:center; gap:0.4rem; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:rgba(255,255,255,0.75); font-size:0.75rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; padding:0.35rem 0.9rem; border-radius:50px; margin-bottom:1.5rem; }
+        .policy-hero h1 { font-family:'DM Serif Display',serif; font-size:clamp(2.2rem,5vw,3.5rem); color:var(--white); font-weight:400; line-height:1.15; margin-bottom:1rem; }
+        .policy-hero p { font-size:1.05rem; color:rgba(255,255,255,0.6); max-width:560px; line-height:1.7; }
+        .policy-meta { margin-top:2rem; display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap; }
+        .policy-meta-item { display:flex; align-items:center; gap:0.4rem; font-size:0.8rem; color:rgba(255,255,255,0.45); }
+        .policy-meta-item strong { color:rgba(255,255,255,0.75); }
+        .policy-meta-dot { width:3px; height:3px; border-radius:50%; background:rgba(255,255,255,0.2); }
+
+        .policy-layout { max-width:1140px; margin:0 auto; padding:4rem 2rem 6rem; display:grid; grid-template-columns:240px 1fr; gap:4rem; align-items:start; }
+        .policy-sidebar { position:sticky; top:90px; }
+        .sidebar-box { background:var(--off-white); border:1px solid var(--gray-100); border-radius:var(--radius); padding:1.5rem; }
+        .sidebar-title { font-size:0.7rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--gray-400); margin-bottom:1rem; padding-bottom:0.75rem; border-bottom:1px solid var(--gray-100); }
+        .toc-list { list-style:none; }
+        .toc-list li { margin-bottom:0.1rem; }
+        .toc-link { display:block; padding:0.45rem 0.75rem; font-size:0.82rem; color:var(--gray-600); text-decoration:none; border-radius:6px; border-left:2px solid transparent; transition:var(--transition); line-height:1.4; }
+        .toc-link:hover { background:var(--white); color:var(--navy); border-left-color:var(--navy); }
+        .toc-link.active { background:var(--white); color:var(--navy); font-weight:600; border-left-color:var(--navy); }
+        .sidebar-related { margin-top:1.25rem; }
+        .sidebar-related-title { font-size:0.7rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--gray-400); margin-bottom:0.75rem; }
+        .sidebar-related a { display:flex; align-items:center; gap:0.5rem; padding:0.5rem 0.75rem; font-size:0.82rem; color:var(--gray-600); text-decoration:none; border-radius:6px; transition:var(--transition); margin-bottom:0.1rem; }
+        .sidebar-related a:hover { background:var(--white); color:var(--navy); }
+        .sidebar-related a svg { flex-shrink:0; opacity:0.5; }
+
+        .policy-article { min-width:0; }
+        .policy-intro-box { background:linear-gradient(135deg,rgba(0,31,63,0.04),rgba(0,31,63,0.02)); border:1px solid rgba(0,31,63,0.12); border-left:3px solid var(--navy); border-radius:var(--radius); padding:1.25rem 1.5rem; margin-bottom:2.5rem; font-size:0.9rem; color:var(--gray-600); line-height:1.75; }
+        .policy-intro-box a { color:var(--teal); text-decoration:underline; text-underline-offset:3px; }
+        .policy-section { margin-bottom:3rem; scroll-margin-top:100px; }
+        .policy-section h2 { font-family:'DM Serif Display',serif; font-size:1.5rem; font-weight:400; color:var(--navy); margin-bottom:1rem; padding-bottom:0.75rem; border-bottom:1px solid var(--gray-100); display:flex; align-items:center; gap:0.6rem; }
+        .section-num { display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; background:var(--navy); color:var(--white); border-radius:6px; font-family:'DM Sans',sans-serif; font-size:0.75rem; font-weight:700; flex-shrink:0; }
+        .policy-section h3 { font-size:1rem; font-weight:700; color:var(--navy); margin:1.5rem 0 0.5rem; }
+        .policy-section p { font-size:0.93rem; color:var(--gray-600); line-height:1.8; margin-bottom:0.9rem; }
+        .policy-section ul { margin:0.5rem 0 1rem 0; padding:0; list-style:none; }
+        .policy-section ul li { font-size:0.93rem; color:var(--gray-600); line-height:1.75; padding:0.3rem 0 0.3rem 1.2rem; position:relative; }
+        .policy-section ul li::before { content:''; position:absolute; left:0; top:0.75rem; width:5px; height:5px; border-radius:50%; background:var(--navy); }
+        .policy-section ul li strong { color:var(--gray-800); font-weight:600; }
+        .policy-section a { color:var(--teal); text-decoration:underline; text-underline-offset:3px; transition:var(--transition); }
+        .policy-section a:hover { color:var(--navy); }
+        .warning-box { background:rgba(0,31,63,0.04); border:1px solid rgba(0,31,63,0.1); border-radius:var(--radius); padding:1rem 1.25rem; margin:1rem 0; font-size:0.88rem; color:var(--gray-600); line-height:1.7; }
+        .contact-box { background:var(--off-white); border:1px solid var(--gray-100); border-radius:var(--radius); padding:1.5rem; margin-top:1rem; }
+        .contact-box-name { font-weight:700; color:var(--navy); margin-bottom:0.75rem; font-size:0.95rem; }
+        .contact-box p { margin-bottom:0.35rem; }
+
+        .site-footer { background:var(--navy-deep); color:rgba(255,255,255,0.6); padding:4rem 2rem 2rem; }
+        .footer-inner { max-width:1140px; margin:0 auto; }
+        .footer-top { display:grid; grid-template-columns:2fr 1fr 1fr 1fr 1fr; gap:2.5rem; padding-bottom:3rem; border-bottom:1px solid rgba(255,255,255,0.07); }
+        .footer-brand-name { font-family:'DM Serif Display',serif; font-size:1.2rem; color:var(--white); margin-bottom:0.75rem; }
+        .footer-brand-tagline { font-size:0.82rem; line-height:1.7; color:rgba(255,255,255,0.45); margin-bottom:1.5rem; }
+        .footer-social { display:flex; gap:0.6rem; flex-wrap:wrap; }
+        .footer-social a { width:34px; height:34px; border-radius:8px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.5); transition:var(--transition); text-decoration:none; font-size:0.75rem; font-weight:600; }
+        .footer-social a:hover { background:var(--teal); border-color:var(--teal); color:var(--white); transform:translateY(-2px); }
+        .footer-col h4 { font-size:0.7rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:1.1rem; }
+        .footer-col ul { list-style:none; }
+        .footer-col ul li { margin-bottom:0.5rem; }
+        .footer-col ul li a { font-size:0.85rem; color:rgba(255,255,255,0.55); text-decoration:none; transition:var(--transition); display:inline-flex; align-items:center; gap:0.35rem; }
+        .footer-col ul li a:hover { color:var(--white); transform:translateX(3px); }
+        .footer-col ul li a.active-page { color:var(--teal-light); font-weight:600; }
+        .footer-bottom { padding-top:2rem; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; }
+        .footer-bottom p { font-size:0.78rem; color:rgba(255,255,255,0.3); }
+        .footer-bottom a { font-size:0.78rem; color:var(--teal); text-decoration:none; transition:var(--transition); }
+        .footer-bottom a:hover { color:var(--teal-light); }
+
+        @media (max-width:900px) { .policy-layout { grid-template-columns:1fr; gap:2rem; } .policy-sidebar { position:static; } .footer-top { grid-template-columns:1fr 1fr; } }
+        @media (max-width:600px) { .policy-hero { padding:4rem 1.25rem 3rem; } .policy-layout { padding:2rem 1.25rem 4rem; } .footer-top { grid-template-columns:1fr; gap:2rem; } .footer-bottom { flex-direction:column; text-align:center; } }
+    </style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<header class="site-header">
+    <a href="https://nataliabellan.org" class="header-logo">
+        <div class="header-logo-mark"><span>N</span></div>
+        <div class="header-logo-text">Dr. Natália Bellan, PhD</div>
+    </a>
+    <div class="header-right">
+        <div class="lang-switcher">
+            <a href="https://nataliabellan.org/terms-of-use">EN</a>
+            <span class="lang-sep">|</span>
+            <a href="https://nataliabellan.org/termos-de-uso" class="active">PT</a>
+            <span class="lang-sep">|</span>
+            <a href="https://nataliabellan.org/terminos-de-uso">ES</a>
+        </div>
+        <a href="https://nataliabellan.org" class="header-back">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+            Início
+        </a>
+    </div>
+</header>
+
+<div class="policy-hero">
+    <div class="policy-hero-inner">
+        <div class="policy-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Termos de Uso
+        </div>
+        <h1>Termos &amp; Condições</h1>
+        <p>As regras e condições que regem o acesso ao nosso sítio web, cursos, programas de mentoria e serviços de consultoria em todo o mundo.</p>
+        <div class="policy-meta">
+            <div class="policy-meta-item">Última atualização: <strong>Maio de 2026</strong></div>
+            <div class="policy-meta-dot"></div>
+            <div class="policy-meta-item">Regida por: <strong>Lei Brasileira &amp; RGPD</strong></div>
+            <div class="policy-meta-dot"></div>
+            <div class="policy-meta-item">Contacto: <strong>nb@nataliabellan.org</strong></div>
+        </div>
+    </div>
+</div>
+
+<div class="policy-layout">
+    <aside class="policy-sidebar">
+        <div class="sidebar-box">
+            <div class="sidebar-title">Índice</div>
+            <ul class="toc-list">
+                <li><a href="#acceptance" class="toc-link">1. Aceitação dos Termos</a></li>
+                <li><a href="#content" class="toc-link">2. Uso do Conteúdo</a></li>
+                <li><a href="#courses" class="toc-link">3. Cursos &amp; Programas</a></li>
+                <li><a href="#ugc" class="toc-link">4. Conteúdo do Utilizador</a></li>
+                <li><a href="#prohibited" class="toc-link">5. Conduta Proibida</a></li>
+                <li><a href="#accounts" class="toc-link">6. Contas de Utilizador</a></li>
+                <li><a href="#refunds" class="toc-link">7. Política de Reembolso</a></li>
+                <li><a href="#third-party" class="toc-link">8. Links de Terceiros</a></li>
+                <li><a href="#termination" class="toc-link">9. Rescisão</a></li>
+                <li><a href="#liability" class="toc-link">10. Limitação de Responsabilidade</a></li>
+                <li><a href="#law" class="toc-link">11. Lei Aplicável</a></li>
+                <li><a href="#contact" class="toc-link">12. Contacte-nos</a></li>
+            </ul>
+            <div class="sidebar-related">
+                <div class="sidebar-related-title">Documentos Relacionados</div>
+                <a href="https://nataliabellan.org/politica-de-privacidade">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Política de Privacidade
+                </a>
+                <a href="https://nataliabellan.org/aviso-de-cookies">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="8" cy="10" r="1" fill="currentColor"/><circle cx="15" cy="9" r="1" fill="currentColor"/><circle cx="12" cy="15" r="1" fill="currentColor"/></svg>
+                    Aviso de Cookies
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <article class="policy-article">
+        <div class="policy-intro-box">
+            Ao aceder e utilizar o sítio web da <strong>Dr. Natália Bellan, PhD</strong> (<a href="https://nataliabellan.org">nataliabellan.org</a>), concorda em ficar vinculado a estes Termos de Uso e à nossa <a href="https://nataliabellan.org/politica-de-privacidade">Política de Privacidade</a>. Se não concordar com alguma parte destes termos, não deverá utilizar o nosso sítio web ou serviços.
+        </div>
+
+        <div class="policy-section" id="acceptance">
+            <h2><span class="section-num">1</span> Aceitação dos Termos</h2>
+            <p>Ao aceder ao sítio web da Dr. Natália Bellan, PhD, confirma que leu, compreendeu e concorda com estes Termos de Uso e com a nossa <a href="https://nataliabellan.org/politica-de-privacidade">Política de Privacidade</a>. Estes termos aplicam-se a todos os visitantes, estudantes, clientes de consultoria e parceiros institucionais.</p>
+            <p>Podemos atualizar estes Termos a qualquer momento. A versão revista entra em vigor imediatamente após a sua publicação. A utilização continuada do sítio web e dos serviços após a publicação de alterações constitui aceitação dessas alterações.</p>
+        </div>
+
+        <div class="policy-section" id="content">
+            <h2><span class="section-num">2</span> Uso do Conteúdo</h2>
+            <p>Todo o conteúdo disponível no sítio web da Dr. Natália Bellan, PhD — incluindo textos, artigos científicos, materiais de cursos, apresentações, publicações, vídeos, imagens e documentos regulatórios — está protegido por leis de direitos de autor e outras normas de propriedade intelectual, incluindo a investigação pioneira registada em 2011 que estabeleceu a Ciência Regulatória como disciplina autónoma.</p>
+            <p>Pode visualizar, descarregar e imprimir materiais apenas para uso pessoal, não comercial e informativo. Citações breves para fins académicos, informativos ou educativos são permitidas, desde que a fonte seja claramente identificada como <strong>"Dr. Natália Bellan, PhD"</strong> com um link para o conteúdo original.</p>
+            <p>Qualquer reprodução, redistribuição, modificação, exibição pública, uso em programas de formação corporativa ou exploração comercial requer permissão prévia e por escrito da Dra. Natália Bellan, PhD. Para pedidos de licenciamento, contacte <a href="mailto:nb@nataliabellan.org">nb@nataliabellan.org</a>.</p>
+        </div>
+
+        <div class="policy-section" id="courses">
+            <h2><span class="section-num">3</span> Conteúdo de Cursos &amp; Programas Educativos</h2>
+            <h3>3.1 Acesso e Licença</h3>
+            <p>Ao inscrever-se num curso ou programa de mentoria, recebe uma licença <strong>pessoal, intransmissível e não exclusiva</strong> para aceder e utilizar os materiais exclusivamente para o seu desenvolvimento profissional individual.</p>
+            <h3>3.2 Proibições Específicas</h3>
+            <p>É expressamente proibido:</p>
+            <ul>
+                <li>Partilhar credenciais de acesso ou materiais do curso com terceiros</li>
+                <li>Gravar, reproduzir ou redistribuir aulas, vídeos ou materiais sem autorização escrita</li>
+                <li>Utilizar o conteúdo do curso para criar produtos ou serviços concorrentes</li>
+                <li>Apresentar os materiais como seus ou pertencentes a outra instituição</li>
+            </ul>
+            <h3>3.3 Certificados</h3>
+            <p>Os certificados emitidos pela Dr. Natália Bellan, PhD atestam a conclusão do programa e destinam-se ao uso pessoal e profissional do titular. Qualquer falsificação ou uso indevido será tratado como violação destes Termos e pode ter consequências legais.</p>
+        </div>
+
+        <div class="policy-section" id="ugc">
+            <h2><span class="section-num">4</span> Conteúdo Gerado pelo Utilizador</h2>
+            <p>Se enviar comentários, artigos, estudos de caso ou qualquer outro conteúdo nos nossos canais (fóruns, redes sociais, plataformas de cursos), declara que é titular ou detém os direitos necessários sobre esse conteúdo. Ao enviá-lo, concede à Dr. Natália Bellan, PhD uma licença para usar, reproduzir, publicar e distribuir o conteúdo em qualquer forma ou meio, para fins institucionais e educativos.</p>
+            <p>Reservamo-nos o direito de recusar, editar ou remover qualquer conteúdo que não cumpra os nossos padrões éticos e científicos ou que seja incompatível com os valores da Dra. Natália Bellan, PhD.</p>
+        </div>
+
+        <div class="policy-section" id="prohibited">
+            <h2><span class="section-num">5</span> Conduta Proibida</h2>
+            <p>Concorda em não:</p>
+            <ul>
+                <li>Publicar material ilegal, difamatório, discriminatório ou de assédio contrário à legislação brasileira ou internacional aplicável</li>
+                <li>Violar direitos de propriedade intelectual, privacidade ou imagem de terceiros</li>
+                <li>Carregar vírus, malware ou qualquer código prejudicial</li>
+                <li>Tentar obter acesso não autorizado a plataformas de cursos, áreas de clientes ou sistemas da Dra. Natália Bellan, PhD</li>
+                <li>Utilizar ferramentas automatizadas (bots, scrapers, etc.) para recolher conteúdo sem autorização</li>
+                <li>Participar em spam, phishing ou qualquer prática enganosa</li>
+                <li>Fazer-se passar falsamente por colaborador da Dra. Natália Bellan, PhD, estudante certificado ou parceiro</li>
+                <li>Interferir no funcionamento normal do sítio web ou das plataformas educativas</li>
+                <li>Utilizar o nome, imagem ou credenciais da Dra. Natália Bellan, PhD sem autorização expressa e por escrito</li>
+            </ul>
+        </div>
+
+        <div class="policy-section" id="accounts">
+            <h2><span class="section-num">6</span> Contas de Utilizador &amp; Área do Estudante</h2>
+            <p>Se criar uma conta para aceder a cursos, programas de mentoria ou à área de clientes, é o único responsável pela confidencialidade das suas credenciais e por todas as atividades realizadas sob a sua conta.</p>
+            <p>Notifique-nos imediatamente de qualquer utilização não autorizada enviando um e-mail para <a href="mailto:nb@nataliabellan.org">nb@nataliabellan.org</a>.</p>
+        </div>
+
+        <div class="policy-section" id="refunds">
+            <h2><span class="section-num">7</span> Política de Reembolso</h2>
+            <p>Os cursos e programas de mentoria têm políticas de reembolso específicas detalhadas no momento da compra. Em geral:</p>
+            <ul>
+                <li>Cancelamentos solicitados dentro de <strong>7 dias</strong> após a compra têm direito a reembolso integral</li>
+                <li>Cancelamentos após o acesso aos materiais estão sujeitos a análise caso a caso</li>
+                <li>Sessões de consultoria já realizadas não são reembolsáveis</li>
+            </ul>
+            <p>Para questões de reembolso, contacte <a href="mailto:nb@nataliabellan.org">nb@nataliabellan.org</a>.</p>
+        </div>
+
+        <div class="policy-section" id="third-party">
+            <h2><span class="section-num">8</span> Links e Serviços de Terceiros</h2>
+            <p>O sítio web pode conter links para sítios web ou serviços externos — incluindo portais de agências regulatórias (FDA, EMA, ANVISA), publicações académicas, parceiros corporativos e plataformas educativas. A Dra. Natália Bellan, PhD não se responsabiliza pela disponibilidade, conteúdo ou práticas de privacidade desses terceiros. A inclusão de um link não implica endosso.</p>
+        </div>
+
+        <div class="policy-section" id="termination">
+            <h2><span class="section-num">9</span> Rescisão</h2>
+            <p>Reservamo-nos o direito de suspender ou encerrar o seu acesso ao sítio web e aos serviços, com ou sem aviso prévio, por qualquer violação destes Termos, por conduta incompatível com os valores da Dra. Natália Bellan, PhD ou por qualquer outro motivo justificado.</p>
+        </div>
+
+        <div class="policy-section" id="liability">
+            <h2><span class="section-num">10</span> Isenções &amp; Limitação de Responsabilidade</h2>
+            <p>O conteúdo do sítio web e dos cursos é disponibilizado apenas para <strong>fins educativos e informativos</strong> e não constitui assessoria regulatória, jurídica ou médica vinculante para situações específicas. Para consultoria regulatória aplicada ao seu projeto específico, contacte diretamente a equipa da Dra. Natália Bellan, PhD.</p>
+            <div class="warning-box">ℹ️ Na máxima extensão permitida pela legislação brasileira e internacional aplicável, a Dra. Natália Bellan, PhD isenta-se de toda a responsabilidade por quaisquer danos decorrentes da utilização do sítio web ou da confiança no seu conteúdo sem a devida contratação dos serviços de consultoria.</div>
+        </div>
+
+        <div class="policy-section" id="law">
+            <h2><span class="section-num">11</span> Lei Aplicável &amp; Jurisdição</h2>
+            <p>Estes Termos são regidos pelas leis da República Federativa do Brasil, em particular o Código Civil, o Marco Civil da Internet (Lei N.º 12.965/2014) e a LGPD (Lei N.º 13.709/2018). Para clientes internacionais, o RGPD aplica-se adicionalmente onde pertinente. Qualquer litígio será submetido aos tribunais da Comarca de São Paulo, Estado de São Paulo, Brasil.</p>
+        </div>
+
+        <div class="policy-section" id="contact">
+            <h2><span class="section-num">12</span> Contacte-nos</h2>
+            <p>Para questões sobre estes Termos de Uso:</p>
+            <div class="contact-box">
+                <div class="contact-box-name">Dr. Natália Bellan, PhD</div>
+                <p>E-mail: <a href="mailto:nb@nataliabellan.org">nb@nataliabellan.org</a></p>
+                <p>Sítio web: <a href="https://nataliabellan.org">nataliabellan.org</a></p>
+                <p style="margin-top:0.75rem;font-size:0.82rem;color:var(--gray-400);">Respondemos a todos os pedidos no prazo máximo de 15 dias úteis.</p>
+            </div>
+        </div>
+    </article>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div>
+                <div class="footer-brand-name">Dr. Natália Bellan, PhD</div>
+                <p class="footer-brand-tagline">O primeiro e único PhD do mundo em Ciência Regulatória/Inteligência Regulatória. Expertise global pioneira em pharma, medtech &amp; inovação desde 2011.</p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/nat%C3%A1lia-bellan-engtech-pharmd-mres-ph-d-15845823/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+                    <a href="https://www.youtube.com/@drnataliabellanfoundation" target="_blank" rel="noopener" title="YouTube">▶</a>
+                    <a href="https://www.researchgate.net/profile/Natalia-Bellan" target="_blank" rel="noopener" title="ResearchGate">RG</a>
+                    <a href="http://lattes.cnpq.br/0732463146415084" target="_blank" rel="noopener" title="CNPq Lattes">CV</a>
+                    <a href="mailto:nb@nataliabellan.org" title="E-mail">@</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Serviços</h4>
+                <ul>
+                    <li><a href="https://nataliabellan.org/#services">Consultoria Estratégica</a></li>
+                    <li><a href="https://nataliabellan.org/#services">Inteligência Regulatória</a></li>
+                    <li><a href="https://nataliabellan.org/#services">Gestão MSL &amp; KOL</a></li>
+                    <li><a href="https://nataliabellan.org/#services">Apoio a Ensaios Clínicos</a></li>
+                    <li><a href="https://nataliabellan.org/#services">Defesa Técnica</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Educação</h4>
+                <ul>
+                    <li><a href="https://sites.google.com/view/nataliabellanfoundation/courses" target="_blank" rel="noopener">Cursos Online</a></li>
+                    <li><a href="https://sites.google.com/view/nataliabellanfoundation/courses" target="_blank" rel="noopener">Mentoria</a></li>
+                    <li><a href="https://sites.google.com/view/nataliabellanfoundation/courses" target="_blank" rel="noopener">Formação Corporativa</a></li>
+                    <li><a href="https://www.amazon.com/stores/author/B0DQHCD34L/allbooks" target="_blank" rel="noopener">Livros na Amazon</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="https://nataliabellan.org/#credentials">Credenciais</a></li>
+                    <li><a href="https://nataliabellan.org/#expertise">Áreas de Expertise</a></li>
+                    <li><a href="https://nataliabellan.org/#global">Alcance Global</a></li>
+                    <li><a href="https://nataliabellan.org/#contact">Fale Connosco</a></li>
+                    <li><a href="mailto:nb@nataliabellan.org">nb@nataliabellan.org</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="https://nataliabellan.org/politica-de-privacidade">Política de Privacidade</a></li>
+                    <li><a href="https://nataliabellan.org/termos-de-uso" class="active-page">Termos de Uso</a></li>
+                    <li><a href="https://nataliabellan.org/aviso-de-cookies">Aviso de Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dr. Natália Bellan, PhD. Todos os direitos reservados.</p>
+            <a href="https://app-algoritmo.github.io/digital-solutions" target="_blank" rel="noopener">Developed by Digital Solutions</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    window.addEventListener('scroll', () => {
+        const el = document.getElementById('progress-bar');
+        const s = document.documentElement.scrollTop;
+        const h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        el.style.width = (s / h * 100) + '%';
+    });
+    const sections = document.querySelectorAll('.policy-section[id]');
+    const tocLinks = document.querySelectorAll('.toc-link');
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                tocLinks.forEach(l => l.classList.remove('active'));
+                const a = document.querySelector(`.toc-link[href="#${e.target.id}"]`);
+                if (a) a.classList.add('active');
+            }
+        });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(s => obs.observe(s));
+</script>
+</body>
+</html>
